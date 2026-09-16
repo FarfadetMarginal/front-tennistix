@@ -26,7 +26,7 @@ const apiService = {
     // },
 
     async login(email, password, signal){
-        const req = await fetch(`${BASE_URL}/login`, {
+        const req = await fetch(`${BASE_URL}/auth/login`, {
             method : 'post',
             headers : {
                 'Content-Type' : 'application/json'
@@ -36,13 +36,14 @@ const apiService = {
         })
 
         if(!req.ok){
-            throw new Error(`Error HTTP: ${req.status}`)
+            const data = await req.json()
+            throw new Error(data.message)
         }
         return await req.json()
     },
 
     async register(pseudo, email, password, signal){
-        const req = await fetch(`${BASE_URL}/register`, {
+        const req = await fetch(`${BASE_URL}/auth/register`, {
             method : 'post',
             headers : {
                 'Content-Type' : 'application/json'
@@ -52,7 +53,42 @@ const apiService = {
         })
 
         if(!req.ok){
-            throw new Error(`Error HTTP: ${req.status}`)
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+
+    async forgotpass(email, signal){
+        const req = await fetch(`${BASE_URL}/auth/forgot-password`, {
+            method : 'PATCH',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            body : JSON.stringify({email}),
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+
+    async resetpass(token, email, newPassword, signal){
+        const req = await fetch(`${BASE_URL}/auth/reset-password/${token}`, {
+            method : 'PATCH',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            body : JSON.stringify({email, newPassword}),
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
         }
         return await req.json()
     }
