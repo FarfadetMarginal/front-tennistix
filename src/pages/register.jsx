@@ -4,7 +4,6 @@ const Register = () => {
     return (
         <>
             <main className="registermain">
-                {/* <LogoBig /> */}
                 <RegisterForm />
             </main>
             {/* <Footer /> */}

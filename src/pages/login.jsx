@@ -1,10 +1,10 @@
 import LoginForm from "../components/loginform";
+import '../styles/pages/_login.scss'
 
 const Login = () => {
     return (
         <>
             <main className="loginmain">
-                {/* <LogoBig /> */}
                 <LoginForm />
             </main>
             {/* <Footer /> */}

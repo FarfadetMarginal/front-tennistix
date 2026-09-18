@@ -1,0 +1,7 @@
+@use '../abstracts/variables' as *;
+
+.loginmain{
+    background-image: url(public/bgloginpng.png);
+    background-color:$bg;
+    background-blend-mode: color-burn;
+}

@@ -4,7 +4,6 @@ const ForgotPass = () => {
     return (
         <>
             <main className="forgotpassmain">
-                {/* <LogoBig /> */}
                 <ForgotPassForm />
             </main>
             {/* <Footer /> */}
