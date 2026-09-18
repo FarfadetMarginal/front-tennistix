@@ -1,0 +1,73 @@
+@use '../abstracts/variables' as *;
+
+form {
+    position: relative;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+    min-height: 100dvh;
+
+    /* Active la 3D pour gérer la profondeur sans casser les arrière-plans */
+    transform-style: preserve-3d;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        height: 50px;
+        background-color: white;
+        box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.10);
+    }
+
+    /* 1er sous-plan (juste derrière) */
+    &::before {
+        top: -12px;
+        left: 10px;  
+        right: 10px;
+        /* Décale physiquement l'élément vers l'arrière sur l'axe Z */
+        transform: translateZ(-1px);
+    }
+
+    /* 2e sous-plan (tout au fond) */
+    &::after {
+        top: -22px;
+        left: 20px;  
+        right: 20px;
+        /* Décale encore plus vers l'arrière */
+        transform: translateZ(-2px);
+    }
+    text-align: start;
+    font-family: $textfont;
+    display: flex;
+    flex-direction: column;
+    label{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    input{
+        border-radius: 30px;
+        border-width: 0;
+        box-shadow: 0 -0px 16px 4px rgba(0, 0, 0, 0.10);
+        height: 50px;
+        margin-bottom: 20px;
+        &::placeholder{
+            font-family: $textfont;
+            font-size: 20px;
+            padding-left: 10px;
+            color: $colorplaceholder;
+            font-weight: 300;
+        }
+    }
+    h1{
+        font-family: $titlefont;
+        color: black;
+        font-weight: 500;
+    }
+    p{
+        
+    }
+}

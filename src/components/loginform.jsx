@@ -38,6 +38,8 @@ function LoginForm() {
   return (
     <>
         <form onSubmit={handleSubmit}>
+            <h1>Welcome back !</h1>
+            
             <label htmlFor="mail">Mail</label>
             <input type="email" name="mail" placeholder="Enter your mail adress" onChange={(e) => setEmail(e.target.value)} />
 

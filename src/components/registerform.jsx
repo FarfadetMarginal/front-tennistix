@@ -36,6 +36,8 @@ function RegisterForm() {
   return (
     <>
         <form onSubmit={handleSubmit}>
+            <h1>Welcome back !</h1>
+            
             <label htmlFor="pseudo">Username</label>
             <input type="text" name="pseudo" placeholder="Enter your username" onChange={(e) => setPseudo(e.target.value)} />
 

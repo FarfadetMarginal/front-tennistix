@@ -5,6 +5,7 @@ const Login = () => {
     return (
         <>
             <main className="loginmain">
+            <img className="biglogo" src="public/logotx.webp" alt="logo tennistix" />
                 <LoginForm />
             </main>
             {/* <Footer /> */}
