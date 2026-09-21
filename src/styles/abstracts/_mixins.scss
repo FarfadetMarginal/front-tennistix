@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as *;
+
+@mixin button1{
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    border-style: solid;
+    font-size: 20px;
+    &:hover{
+        transform: scaleX(1.1);
+    }
+}
+
+@mixin input1{
+    border-radius: 30px;
+    border-width: 0;
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.15);
+    height: 50px;
+    align-items: center;
+
+    font-family: $textfont;
+    font-size: 20px;
+    padding-left: 10px;
+    &::placeholder{
+        font-family: $textfont;
+        font-size: 20px;
+        color: $colorplaceholder;
+        font-weight: 300;
+    }
+}
