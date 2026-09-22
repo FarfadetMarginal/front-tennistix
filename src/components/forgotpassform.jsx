@@ -1,12 +1,10 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
 import apiService from '../services/apiService';
-import { Link } from "react-router-dom"
+
 
 function ForgotPassForm() {
     const [email, setEmail] = useState(null)
     const [loading, setLoading] = useState(false)
-    const navigate = useNavigate()
     const [error, setError] = useState(null)
 
     async function handleSubmit(e) {
@@ -34,6 +32,7 @@ function ForgotPassForm() {
   return (
     <>
         <form onSubmit={handleSubmit}>
+            <h1>Enter your mail, submit and check your inbox ! </h1>
             <label htmlFor="mail">Mail</label>
             <input type="email" name="mail" placeholder="Enter your mail adress" onChange={(e) => setEmail(e.target.value)} />
 

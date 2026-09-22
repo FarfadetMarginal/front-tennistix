@@ -91,6 +91,67 @@ const apiService = {
             throw new Error(data.message)
         }
         return await req.json()
+    },
+
+    async getlive(){
+        const req = await fetch(`${BASE_URL}/match/live`, {
+            method : 'GET',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+    async getincoming(){
+        const req = await fetch(`${BASE_URL}/match/incoming`, {
+            method : 'GET',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+    async getfinishedatp(){
+        const req = await fetch(`${BASE_URL}/match/finishedatp`, {
+            method : 'GET',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+    async getfinishedwta(){
+        const req = await fetch(`${BASE_URL}/match/finishedwta`, {
+            method : 'GET',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
     }
 }
 

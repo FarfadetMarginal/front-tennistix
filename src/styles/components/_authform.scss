@@ -13,6 +13,9 @@ form {
     /* Active la 3D pour gérer la profondeur sans casser les arrière-plans */
     transform-style: preserve-3d;
 
+    // stick to end page
+    top: 20px;
+
 
     &::before,
     &::after {
@@ -65,6 +68,10 @@ form {
         color: $colortb;
         align-self: end;
         padding-bottom: 20px;
+        font-weight: 500;
+        &:hover{
+            transform: scale(1.1);
+        }
     }
     button{
         @include button1;
@@ -78,6 +85,16 @@ form {
         font-weight: 500;
         a{
             color: $colorh;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
+    }
+}
+
+@media screen and (min-width :500px){
+    form{
+        width: 500px;
+        justify-self: center;
     }
 }

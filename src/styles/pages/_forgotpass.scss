@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as *;
+@use '../components/authform' ;
+
+.forgotpassmain{
+    background-image: url(public/bgloginpng.png);
+    background-color: $bg;
+    background-blend-mode: color-burn;
+    background-size: contain;
+    text-align: center;
+    form{
+        height: 450px;
+    }
+    .biglogo{
+        width: 80px;
+        justify-self: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}

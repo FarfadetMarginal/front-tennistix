@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as *;
+@use '../components/authform' ;
+
+.registermain{
+    background-image: url(public/bgloginpng.png);
+    background-color: $bg;
+    background-blend-mode: color-burn;
+    background-size: contain;
+    text-align: center;
+    .biglogo{
+        width: 80px;
+        justify-self: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
