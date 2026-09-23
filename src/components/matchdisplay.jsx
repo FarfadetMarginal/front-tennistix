@@ -1,64 +1,50 @@
-import { useState } from "react"
-import apiService from '../services/apiService';
+import { formatDate } from '../utils/formatdate';
 
-function MatchDisplay() {
+function MatchDisplay({ matches }) {
 
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(null)
+    return (
+        <div className="matches">
 
-    const [live, setLive] = useState([])
-    const [atp, setAtp] = useState([])
-    const [wta, setWta] = useState([])
-    const [incoming, setIncoming] = useState([])
+            {matches.map(match => (
+                <div className="match" key={`${match.type}-${match.id}`}>
 
-    useEffect(() => { 
-        const controller = new AbortController();
-        async function loadMatches() {
-            try {
-                setLoading(true); 
-                setError(null);
-                const [ liveData, incomingData, finishedATPData, finishedWTAData ] = await Promise.all([ apiService.getlive(controller.signal), apiService.getincoming(controller.signal), apiService.getfinishedatp(controller.signal), apiService.getfinishedwta(controller.signal) ]);
+                    <div className="match-header">
+                        <span>{match.tournament}</span>
+                        <span>{match.tour.toUpperCase()}</span>
+                    </div>
 
-                setLive(liveData.data || []);
-                setIncoming(incomingData.data || []);
-                setAtp(finishedATPData.data || []);
-                setWta(finishedWTAData.data || []);
+                    <div className="players">
+                        <p>{match.player1}</p>
+                        <p>{match.player2}</p>
+                    </div>
 
-            } catch (err) {
-                if(err.name !== 'AbortError') {
-                console.error('Loading error: ', err)
-                setError(err.message)
-                }
-            } finally {
-                // Le finally s'exécute quoi qu'il arrive, après tout ce qui vient avant
-                if(!controller.signal.aborted){
-                setLoading(false)
-                // Rediriger sur la page profile
-                }
-            }
-        }
-        loadMatches()
+                    {/* Affiché si le match est terminé ou live */}
+                    {(match.type === 'finished' || match.type === 'live') && (
+                        <div className="match-score">
+                            <span>{match.scorep1}</span>
+                            <span>{match.scorep2}</span>
+                        </div>
+                    )}
 
-        return () => { controller.abort(); };
-    }, []);
+                    {/* Affiché si le match est scheduled */}
+                    {match.type === 'incoming' && (
+                        <div className="match-infos">
+                            <span>{formatDate(match.date)}</span>
+                        </div>
+                    )}
 
-    if(loading) {
-        return <p>Chargement...</p>
-    }
+                    {/* Boutons prono si le match est scheduled */}
+                    {match.type === 'incoming' && (
+                        <div className="pronos">
+                            <button>Prono 1</button>
+                            <button>Prono 2</button>
+                        </div>
+                    )}
+                </div>
+            ))}
 
-    if (error) { 
-        return <p>{error}</p>; 
-    }
-
-  return (
-    <>
-        <section className="sectionmatch">
-            
-
-        </section>
-        <p>{error}</p>
-    </>
-  )
+        </div>
+    )
 }
 
 export default MatchDisplay

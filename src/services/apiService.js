@@ -93,7 +93,7 @@ const apiService = {
         return await req.json()
     },
 
-    async getlive(){
+    async getlive(signal){
         const req = await fetch(`${BASE_URL}/match/live`, {
             method : 'GET',
             headers : {
@@ -108,7 +108,7 @@ const apiService = {
         }
         return await req.json()
     },
-    async getincoming(){
+    async getincoming(signal){
         const req = await fetch(`${BASE_URL}/match/incoming`, {
             method : 'GET',
             headers : {
@@ -123,7 +123,7 @@ const apiService = {
         }
         return await req.json()
     },
-    async getfinishedatp(){
+    async getfinishedatp(signal){
         const req = await fetch(`${BASE_URL}/match/finishedatp`, {
             method : 'GET',
             headers : {
@@ -138,7 +138,7 @@ const apiService = {
         }
         return await req.json()
     },
-    async getfinishedwta(){
+    async getfinishedwta(signal){
         const req = await fetch(`${BASE_URL}/match/finishedwta`, {
             method : 'GET',
             headers : {

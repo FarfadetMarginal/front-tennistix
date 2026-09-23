@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as *;
+@use '../components/matchdisplay' ;
+
+.homemain{
+    text-align: center;
+    .lillogo{
+        width: 45px;
+        justify-self: center;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+}
