@@ -15,8 +15,7 @@ function RegisterForm() {
 
         try {
             setLoading(true)
-            const datas = await apiService.register(pseudo, email, password, controller.signal)
-            setData(datas)
+            await apiService.register(pseudo, email, password, controller.signal)
         } catch (err) {
             if(err.name !== 'AbortError') {
             console.error('Loading error: ', err)

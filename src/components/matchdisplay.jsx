@@ -1,7 +1,6 @@
 import { formatDate } from '../utils/formatdate';
 
 function MatchDisplay({ matches }) {
-
     return (
         <div className="matches">
 

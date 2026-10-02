@@ -31,6 +31,7 @@ const apiService = {
             headers : {
                 'Content-Type' : 'application/json'
             },
+            credentials: 'include',
             body : JSON.stringify({email, password}),
             signal
         })
@@ -48,6 +49,7 @@ const apiService = {
             headers : {
                 'Content-Type' : 'application/json'
             },
+            credentials: 'include',
             body : JSON.stringify({pseudo, email, password}),
             signal
         })
@@ -93,11 +95,12 @@ const apiService = {
         return await req.json()
     },
 
-    async getlive(signal){
+    async getlive(accessToken, signal){
         const req = await fetch(`${BASE_URL}/match/live`, {
             method : 'GET',
             headers : {
-                'Content-Type' : 'application/json'
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
             },
             signal
         })
@@ -108,11 +111,12 @@ const apiService = {
         }
         return await req.json()
     },
-    async getincoming(signal){
+    async getincoming(accessToken, signal){
         const req = await fetch(`${BASE_URL}/match/incoming`, {
             method : 'GET',
             headers : {
-                'Content-Type' : 'application/json'
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
             },
             signal
         })
@@ -123,11 +127,12 @@ const apiService = {
         }
         return await req.json()
     },
-    async getfinishedatp(signal){
+    async getfinishedatp(accessToken, signal){
         const req = await fetch(`${BASE_URL}/match/finishedatp`, {
             method : 'GET',
             headers : {
-                'Content-Type' : 'application/json'
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
             },
             signal
         })
@@ -138,11 +143,12 @@ const apiService = {
         }
         return await req.json()
     },
-    async getfinishedwta(signal){
+    async getfinishedwta(accessToken, signal){
         const req = await fetch(`${BASE_URL}/match/finishedwta`, {
             method : 'GET',
             headers : {
-                'Content-Type' : 'application/json'
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
             },
             signal
         })
@@ -152,6 +158,22 @@ const apiService = {
             throw new Error(data.message)
         }
         return await req.json()
+    },
+
+    async refresh(signal) {
+        const req = await fetch(`${BASE_URL}/auth/refresh`, {
+            method: 'POST',
+            credentials: 'include',
+            signal
+        })
+
+        const data = await req.json()
+
+        if (!req.ok) {
+            throw new Error(data.message)
+        }
+
+        return data
     }
 }
 

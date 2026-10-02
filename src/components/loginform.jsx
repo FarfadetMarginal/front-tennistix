@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import apiService from '../services/apiService';
 import { Link } from "react-router-dom"
+import { useAuth } from "../contexts/AuthContext";
 
 function LoginForm() {
     const [email, setEmail] = useState(null)
@@ -9,16 +10,20 @@ function LoginForm() {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
     const [error, setError] = useState(null)
-
+    const { setAccessToken } = useAuth()
+    
     async function handleSubmit(e) {
         e.preventDefault()
         const controller = new AbortController()
-
+        
         try {
             setLoading(true)
             setError(null)
             const datas = await apiService.login(email, password, controller.signal)
-            navigate('/home')
+            setAccessToken(datas.token)
+            console.log("LOGIN DATA :", datas)
+
+            navigate('/')
         } catch (err) {
             if(err.name !== 'AbortError') {
             console.error('Loading error: ', err)

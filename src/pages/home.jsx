@@ -3,6 +3,8 @@ import Filters from "../components/filterbar"
 import MatchDisplay from "../components/matchdisplay"
 import apiService from '../services/apiService';
 import '../styles/pages/_home.scss'
+import { useAuth } from "../contexts/AuthContext";
+import { useNavigate } from "react-router-dom"
 
 
 const Home = () => {
@@ -13,13 +15,22 @@ const Home = () => {
     const [tour, setTour] = useState("all")
     const [matchType, setMatchType] = useState("live")
 
+    const { accessToken, authLoading } = useAuth()
+    const navigate = useNavigate()
+    
     useEffect(() => { 
+        if (authLoading) return 
+        if (!accessToken) {
+                // rediriger vers login ou afficher message
+                navigate('/login')
+                return 
+            }
         const controller = new AbortController();
         async function loadMatches() {
             try {
                 setLoading(true); 
                 setError(null);
-                const [ liveData, incomingData, finishedATPData, finishedWTAData ] = await Promise.all([ apiService.getlive(controller.signal), apiService.getincoming(controller.signal), apiService.getfinishedatp(controller.signal), apiService.getfinishedwta(controller.signal) ]);
+                const [ liveData, incomingData, finishedATPData, finishedWTAData ] = await Promise.all([ apiService.getlive(accessToken, controller.signal), apiService.getincoming(accessToken, controller.signal), apiService.getfinishedatp(accessToken, controller.signal), apiService.getfinishedwta(accessToken, controller.signal) ]);
 
                  const live = (liveData.data || []).map(match => ({
                     id: match.id,
@@ -92,7 +103,7 @@ const Home = () => {
         loadMatches()
 
         return () => { controller.abort(); };
-    }, []);
+    }, [accessToken, authLoading]);
 
     const filteredMatches = matches.filter(match => {
 
