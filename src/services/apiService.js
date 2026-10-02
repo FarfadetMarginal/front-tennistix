@@ -174,7 +174,93 @@ const apiService = {
         }
 
         return data
-    }
+    },
+
+    async prono(accessToken, signal){
+        const req = await fetch(`${BASE_URL}/prono/new`, {
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
+            },
+            body : JSON.stringify({match_id, prono}),
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+
+    async sendRequest(accessToken, signal){
+        const req = await fetch(`${BASE_URL}/friend/send/:id`, {
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+
+    async acceptRequest(accessToken, signal){
+        const req = await fetch(`${BASE_URL}/friend/accept/:id`, {
+            method : 'PATCH',
+            headers : {
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+
+    async declineRequest(accessToken, signal){
+        const req = await fetch(`${BASE_URL}/friend/decline/:id`, {
+            method : 'DELETE',
+            headers : {
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+
+    async getFriends(accessToken, signal){
+        const req = await fetch(`${BASE_URL}/friend/list`, {
+            method : 'GET',
+            headers : {
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
 }
 
 export default apiService;

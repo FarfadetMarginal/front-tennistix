@@ -29,3 +29,43 @@
         font-weight: 300;
     }
 }
+
+@mixin match{
+    font-family: $textfont;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: white;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    .match-details{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span{
+            letter-spacing: 10px;
+            padding: 0 5px;
+        }
+        button{
+            background-color: $colorh;
+            color: white;
+            border-style: none;
+            border-radius: 30px;
+            padding: 8px;
+        }
+    }
+    .match-header{
+        font-size: 18px;
+        font-weight: 400;
+        display: flex;
+        gap: 10px;
+    }
+
+    .match-infos{
+        font-size: 18px;
+        font-weight: 400;
+        display: flex;
+        gap: 10px;
+        place-self: end;
+    }
+}

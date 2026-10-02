@@ -12,16 +12,21 @@ function MatchDisplay({ matches }) {
                         <span>{match.tour.toUpperCase()}</span>
                     </div>
 
-                    <div className="players">
-                        <p>{match.player1}</p>
-                        <p>{match.player2}</p>
-                    </div>
+                    {/* Affiché si le match est scheduled */}
+                    {match.type === 'live' && (
+                        <div className="match-infos">
+                            <div className="match-details"><p>{match.player1}</p><span>{match.scorep1}</span></div>
+                            <div className="match-details"><p>{match.player2}</p><span>{match.scorep2}</span></div>
+                        </div>
+                    )}
+
+
 
                     {/* Affiché si le match est terminé ou live */}
-                    {(match.type === 'finished' || match.type === 'live') && (
+                    {match.type === 'finished' && (
                         <div className="match-score">
-                            <span>{match.scorep1}</span>
-                            <span>{match.scorep2}</span>
+                            <div className="match-details"><p>{match.player1}</p><span>{match.scorep1}</span></div>
+                            <div className="match-details"><p>{match.player2}</p><span>{match.scorep2}</span></div>
                         </div>
                     )}
 
@@ -35,8 +40,8 @@ function MatchDisplay({ matches }) {
                     {/* Boutons prono si le match est scheduled */}
                     {match.type === 'incoming' && (
                         <div className="pronos">
-                            <button>Prono 1</button>
-                            <button>Prono 2</button>
+                            <div className="match-details"><p>{match.player1}</p><button>Prono</button></div>
+                            <div className="match-details"><p>{match.player2}</p><button>Prono</button></div>
                         </div>
                     )}
                 </div>
