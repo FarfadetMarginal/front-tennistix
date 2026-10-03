@@ -1,6 +1,21 @@
 import { formatDate } from '../utils/formatdate';
+import { useState } from "react"
+import { useAuth } from "../contexts/AuthContext"
+import apiService from '../services/apiService'
 
 function MatchDisplay({ matches }) {
+    const { accessToken } = useAuth()
+    const [pronosDone, setPronosDone] = useState({}) // { match_id: prono choisi }
+    const [pronoError, setPronoError] = useState({})
+
+    const handleProno = async (matchId, prono) => {
+        try {
+            await apiService.prono(accessToken, matchId, prono)
+            setPronosDone(prev => ({ ...prev, [matchId]: prono }))
+        } catch (err) {
+            setPronoError(prev => ({ ...prev, [matchId]: err.message }))
+        }
+    }
     return (
         <div className="matches">
 
@@ -40,8 +55,32 @@ function MatchDisplay({ matches }) {
                     {/* Boutons prono si le match est scheduled */}
                     {match.type === 'incoming' && (
                         <div className="pronos">
-                            <div className="match-details"><p>{match.player1}</p><button>Prono</button></div>
-                            <div className="match-details"><p>{match.player2}</p><button>Prono</button></div>
+                            {pronosDone[match.id] ? (
+                                // Prono déjà posé — affiche le choix
+                                <>                                
+                                    <div className="match-details">
+                                        <p>{match.player1}</p>
+                                         <p>Prono posé :</p>
+                                    </div>
+                                    <div className="match-details">
+                                        <p>{match.player2}</p>
+                                         <p>{pronosDone[match.id] === 1 ? match.player1 : match.player2}</p>
+                                    </div>
+                               </>
+                            ) : (
+                                // Boutons de prono
+                                <>
+                                    <div className="match-details">
+                                        <p>{match.player1}</p>
+                                        <button onClick={() => handleProno(match.id, 1)}>Prono</button>
+                                    </div>
+                                    <div className="match-details">
+                                        <p>{match.player2}</p>
+                                        <button onClick={() => handleProno(match.id, 2)}>Prono</button>
+                                    </div>
+                                </>
+                            )}
+                            {pronoError[match.id] && <p className="error">{pronoError[match.id]}</p>}
                         </div>
                     )}
                 </div>

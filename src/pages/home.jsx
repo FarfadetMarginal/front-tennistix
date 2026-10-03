@@ -45,7 +45,7 @@ const Home = () => {
                 }))
 
                 const incoming = (incomingData.data || []).map(match => ({
-                    id: match.id,
+                    id: match.match_id,
                     player1: match.player1_name ?? "Joueur inconnu",
                     player2: match.player2_name ?? "Joueur inconnu",
                     tour: match.tour,

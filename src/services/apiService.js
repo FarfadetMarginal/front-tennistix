@@ -176,7 +176,7 @@ const apiService = {
         return data
     },
 
-    async prono(accessToken, signal){
+    async prono(accessToken, match_id, prono, signal){
         const req = await fetch(`${BASE_URL}/prono/new`, {
             method : 'POST',
             headers : {
