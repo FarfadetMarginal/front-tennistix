@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.s1lb{
+    max-width: 1440px;
+    min-width: 300px;
+    margin: auto;
+    margin-top: 20px;
+    .leaderboard{
+        .lb-row{
+            background-color: white;
+            border-radius: 30px;
+            margin: 10px 0px;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            text-align: center;
+            span{
+                font-family: $textfont;
+                font-size: 20px;
+            }
+            .lb-rank{
+                background-color: $colortb;
+                color: white;
+                border-radius: 30px;
+                width: 30px;
+                height: 30px;
+            }
+            .lb-value{
+                background-color: $colord;
+                color: white;
+                border-radius: 30px;
+                padding: 0 5px;
+            }
+        }
+    }
+}

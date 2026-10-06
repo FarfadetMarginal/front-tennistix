@@ -1,7 +1,7 @@
 @use '../abstracts/variables' as *;
-@use '../components/matchdisplay' ;
+@use '../components/lbdisplay' ;
 
-.homemain{
+.lbmain{
     text-align: center;
     padding: 5px;
     .lillogo{
@@ -10,4 +10,5 @@
         padding-top: 10px;
         padding-bottom: 30px;
     }
+    
 }

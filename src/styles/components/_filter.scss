@@ -5,12 +5,13 @@
     display: flex;
     justify-content: space-between;
     padding: 3px;
-    margin: 0 20px;
     background-color: #ffffff85;
     border-radius: 30px;
     backdrop-filter: blur(10px);
     border: 1px solid rgb(255 255 255);
     box-shadow: inset -1px 4px 13px 0px #0000001a;
+    max-width: 1440px;
+    margin: auto;
     select{
         font-family: $textfont;
         color: white;

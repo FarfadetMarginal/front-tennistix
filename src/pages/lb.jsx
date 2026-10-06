@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 import apiService from '../services/apiService'
 import LbDisplay from "../components/LbDisplay"
 import LbFilters from "../components/filterbarlb"
+import '../styles/pages/_lb.scss'
 
 
 const Leaderboard = () => {
@@ -41,8 +42,15 @@ const Leaderboard = () => {
 
     return (
         <>
+        <main className="lbmain">
+
+            <img className="lillogo" src="logotx.webp" alt="logo tennistix" />
             <LbFilters type={type} setType={setType} scope={scope} setScope={setScope} />
-            <LbDisplay data={data} type={type} />
+            <section className="s1lb">
+                <LbDisplay data={data} type={type} />
+            </section>
+
+        </main>
         </>
     )
 }

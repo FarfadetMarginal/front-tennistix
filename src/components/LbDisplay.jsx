@@ -3,7 +3,7 @@ function LbDisplay({ data, type }) {
         <div className="leaderboard">
             {data.map((row, index) => (
                 <div className="lb-row" key={row.pseudo}>
-                    <span className="lb-rank">#{index + 1}</span>
+                    <span className="lb-rank">{index + 1}</span>
                     <span className="lb-pseudo">{row.pseudo}</span>
                     {type === 'score' 
                         ? <span className="lb-value">{row.score} pts</span>

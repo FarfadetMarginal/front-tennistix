@@ -194,8 +194,8 @@ const apiService = {
         return await req.json()
     },
 
-    async sendRequest(accessToken, signal){
-        const req = await fetch(`${BASE_URL}/friend/send/:id`, {
+    async sendRequest(accessToken, id, signal){
+        const req = await fetch(`${BASE_URL}/friends/send/${id}`, {
             method : 'POST',
             headers : {
                 'Content-Type' : 'application/json',
@@ -211,8 +211,8 @@ const apiService = {
         return await req.json()
     },
 
-    async acceptRequest(accessToken, signal){
-        const req = await fetch(`${BASE_URL}/friend/accept/:id`, {
+    async acceptRequest(accessToken, id, signal){
+        const req = await fetch(`${BASE_URL}/friend/accept/${id}`, {
             method : 'PATCH',
             headers : {
                 'Content-Type' : 'application/json',
@@ -228,8 +228,8 @@ const apiService = {
         return await req.json()
     },
 
-    async declineRequest(accessToken, signal){
-        const req = await fetch(`${BASE_URL}/friend/decline/:id`, {
+    async declineRequest(accessToken, id, signal){
+        const req = await fetch(`${BASE_URL}/friend/decline/${id}`, {
             method : 'DELETE',
             headers : {
                 'Content-Type' : 'application/json',
@@ -264,6 +264,40 @@ const apiService = {
 
     async getLb(accessToken, type = 'score', scope = 'global', signal){
         const req = await fetch(`${BASE_URL}/user/leaderboard?type=${type}&scope=${scope}`, {
+            method : 'GET',
+            headers : {
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+
+    async getUsers(accessToken, query, signal){
+        const req = await fetch(`${BASE_URL}/user/search?q=${encodeURIComponent(query)}`, {
+            method : 'GET',
+            headers : {
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+
+    async getPlayers(accessToken, signal){
+        const req = await fetch(`${BASE_URL}/player/players`, {
             method : 'GET',
             headers : {
                 'Content-Type' : 'application/json',
