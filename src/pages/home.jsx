@@ -41,7 +41,9 @@ const Home = () => {
                     date: match.scheduled_time,
                     type: "live",
                     scorep1: match.score?.games[0],
-                    scorep2: match.score?.games[1]
+                    scorep2: match.score?.games[1],
+                    pointp1: match.score?.points[0],
+                    pointp2: match.score?.points[1],
                 }))
 
                 const incoming = (incomingData.data || []).map(match => ({

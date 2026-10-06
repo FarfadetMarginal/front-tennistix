@@ -42,7 +42,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        span{
+        .match-details-live{
+            display: flex;
+            .match-details-games{
+                letter-spacing: 10px;
+            }
+            .match-details-points{
+                letter-spacing: 0px;
+                padding: 0 5px;
+                width: 25px;
+            }
+        }
+        >span{
             letter-spacing: 10px;
             padding: 0 5px;
         }

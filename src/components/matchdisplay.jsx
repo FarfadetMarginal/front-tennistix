@@ -29,9 +29,9 @@ function MatchDisplay({ matches }) {
 
                     {/* Affiché si le match est scheduled */}
                     {match.type === 'live' && (
-                        <div className="match-infos">
-                            <div className="match-details"><p>{match.player1}</p><span>{match.scorep1}</span></div>
-                            <div className="match-details"><p>{match.player2}</p><span>{match.scorep2}</span></div>
+                        <div className="match-score">
+                            <div className="match-details"><p>{match.player1}</p><p className='match-details-live'><span className='match-details-games'>{match.scorep1}</span><span className='match-details-points'>{match.pointp1}</span></p></div>
+                            <div className="match-details"><p>{match.player2}</p><p className='match-details-live'><span className='match-details-games'>{match.scorep2}</span><span className='match-details-points'>{match.pointp2}</span></p></div>                        
                         </div>
                     )}
 

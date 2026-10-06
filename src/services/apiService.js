@@ -261,6 +261,23 @@ const apiService = {
         }
         return await req.json()
     },
+
+    async getLb(accessToken, type = 'score', scope = 'global', signal){
+        const req = await fetch(`${BASE_URL}/user/leaderboard?type=${type}&scope=${scope}`, {
+            method : 'GET',
+            headers : {
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
 }
 
 export default apiService;
