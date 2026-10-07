@@ -1,5 +1,5 @@
-// import '../styles/pages/_register.scss'
-import ProfileDisplay from "../components/profiledisplay"
+import '../styles/pages/_profile.scss'
+import ProfileDisplay from "../components/ProfileDisplay"
 
 const Profile = () => {
     return (

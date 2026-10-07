@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.s1profile{
+    img{
+        border-radius: 500px;
+        height: 275px;
+        width: 275px;
+        object-fit: cover;
+    }
+}
