@@ -10,7 +10,7 @@ function LoginForm() {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
     const [error, setError] = useState(null)
-    const { setAccessToken } = useAuth()
+    const { setAccessToken, setUser } = useAuth()
     
     async function handleSubmit(e) {
         e.preventDefault()
@@ -21,7 +21,7 @@ function LoginForm() {
             setError(null)
             const datas = await apiService.login(email, password, controller.signal)
             setAccessToken(datas.token)
-            console.log("LOGIN DATA :", datas)
+            setUser(datas.user)
 
             navigate('/')
         } catch (err) {
@@ -42,7 +42,7 @@ function LoginForm() {
 
   return (
     <>
-        <form onSubmit={handleSubmit}>
+        <form className="authform" onSubmit={handleSubmit}>
             <h1>Welcome back !</h1>
             
             <label htmlFor="mail">Mail</label>

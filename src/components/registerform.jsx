@@ -34,7 +34,7 @@ function RegisterForm() {
 
   return (
     <>
-        <form onSubmit={handleSubmit}>
+        <form className="authform" onSubmit={handleSubmit}>
             <h1>Welcome back !</h1>
             
             <label htmlFor="pseudo">Username</label>

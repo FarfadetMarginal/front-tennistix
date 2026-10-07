@@ -312,6 +312,42 @@ const apiService = {
         }
         return await req.json()
     },
+
+    async getProfile(accessToken, signal){
+        const req = await fetch(`${BASE_URL}/user/profile`, {
+            method : 'GET',
+            headers : {
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+
+     async updateUser(accessToken, pseudo, email, password, pp, signal){
+        const req = await fetch(`${BASE_URL}/user/update`, {
+            method : 'PATCH',
+            headers : {
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
+            },
+            credentials: 'include',
+            body : JSON.stringify({pseudo, email, password, pp}),
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
 }
 
 export default apiService;

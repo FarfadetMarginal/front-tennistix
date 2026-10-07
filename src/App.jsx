@@ -6,6 +6,8 @@ import ForgotPass from './pages/forgotpass';
 import ResetPass from './pages/resetpass';
 import Leaderboard from "./pages/lb";
 import Search from "./pages/search";
+import Profile from "./pages/profile";
+import Modify from "./pages/modify";
 // import NotFound from './pages/notfound';
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/leaderboard" element={<Leaderboard />}/>
         <Route path="/search" element={<Search />}/>
+        <Route path="/profile" element={<Profile />}/>
+        <Route path="/modify" element={<Modify />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
         <Route path="/forgotpass" element={<ForgotPass />}/>

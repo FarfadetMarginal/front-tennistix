@@ -5,14 +5,19 @@ const AuthContext = createContext()
 
 export function AuthProvider({ children }) {
   const [accessToken, setAccessToken] = useState(null)
+  const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         const controller = new AbortController()
 
         apiService.refresh(controller.signal)
-        .then(data => setAccessToken(data.token))
+        .then(data => {
+          setAccessToken(data.token)
+          setUser(data.user)
+        })
         .catch(err => {
+          console.log('refresh failed:', err.message)
             if (err.name !== 'AbortError') setAccessToken(null)
         })
         .finally(() => {
@@ -25,7 +30,7 @@ export function AuthProvider({ children }) {
   if (loading) return <p>Chargement...</p>
 
   return (
-    <AuthContext.Provider value={{ accessToken, setAccessToken }}>
+    <AuthContext.Provider value={{ accessToken, setAccessToken, user, setUser }}>
       {children}
     </AuthContext.Provider>
   )
