@@ -5,8 +5,43 @@
 .s1profile{
     img{
         border-radius: 500px;
-        height: 275px;
-        width: 275px;
+        height: 250px;
+        width: 250px;
         object-fit: cover;
+    }
+    .d1profile{
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        transform: translateY(-50px);
+        display: grid;
+        gap: 20px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: white;
+        padding: 5px 20px 20px 20px;
+        max-width: 750px;
+        margin: auto;
+        >p{
+            color: black;
+            font-family: $titlefont;
+            font-size: 30px;
+            font-weight: 500;
+            margin: 40px 0 10px 0;
+        }
+        a, button{
+            height: 50px;
+            background-color: white;
+            border-radius: 30px;
+            color: black;
+            border-style: none;
+            font-family: $textfont;
+            align-content: center;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        button{
+            color: $colortb;
+        }
     }
 }

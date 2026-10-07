@@ -1,6 +1,6 @@
 
-import ModifyForm from "../components/Modifyform";
-// import '../styles/pages/_modify.scss'
+import ModifyForm from "../components/ModifyForm";
+import '../styles/pages/_modify.scss'
 
 const Modify = () => {
     return (

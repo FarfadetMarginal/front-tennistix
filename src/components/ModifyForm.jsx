@@ -14,7 +14,13 @@ function ModifyForm() {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
     const { accessToken, authLoading, user } = useAuth()
+    const [avatarModal, setAvatarModal] = useState(false)
     const navigate = useNavigate()
+
+    const currentAvatar = pp || user?.pp 
+    const urlimg = currentAvatar ? `/avatars/${currentAvatar}` : `/avatars/${user?.pp}`
+
+
     useEffect(() => {
             if (authLoading) return
             if (!accessToken) { navigate('/login'); return }
@@ -47,33 +53,40 @@ function ModifyForm() {
 
     if(loading) return <p>Chargement...</p>
 
+    function handleAvatarSelect(avatar) {
+        setPp(avatar)
+        setAvatarModal(false)
+    }
+    
   return (
     <>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="pseudo">Username</label>
-            <input type="text" name="pseudo" placeholder={user?.pseudo} onChange={(e) => setPseudo(e.target.value)} />
+    <section className="s1modify">
+        <button className="avatar-edit-button" onClick={() => setAvatarModal(true)} aria-label="Changer de photo de profil"><i className="hgi hgi-stroke hgi-rounded hgi-ai-editing"></i></button>
+        <img src={urlimg} alt="photo de profil" />
+        <form className="modifyform" onSubmit={handleSubmit}>
+            <input className="inputpseudo" type="text" name="pseudo" placeholder={user?.pseudo} onChange={(e) => setPseudo(e.target.value)} />
 
-            <label htmlFor="mail">Mail</label>
-            <input type="email" name="mail" placeholder={user?.email} onChange={(e) => setEmail(e.target.value)} />
+            <input className="input2" type="email" name="mail" placeholder={user?.email} onChange={(e) => setEmail(e.target.value)} />
 
-            <label htmlFor="password">Password</label>
-            <input type="password" name="password" placeholder="New password" onChange={(e) => setPassword(e.target.value)} />
+            <input className="input2" type="password" name="password" placeholder="New password" onChange={(e) => setPassword(e.target.value)} />
 
-            <div className="avatar-grid">
-                {Avatars.map(avatar => (
-                    <img
-                        key={avatar}
-                        src={`/avatars/${avatar}`}
-                        alt={avatar}
-                        className={pp === avatar ? 'selected' : ''}
-                        onClick={() => setPp(avatar)}
-                    />
-                ))}
-            </div>
+            {avatarModal && (
+                <div className="avatar-modal-overlay" onClick={() => setAvatarModal(false)}> 
+                    <div className="avatar-modal" onClick={(e) => e.stopPropagation()}>
+                        <button type="button" className="avatar-modal-close" onClick={() => setAvatarModal(false)}> × </button> 
+                        <div className="avatar-grid"> {Avatars.map((avatar) => (
+                            <button type="button" key={avatar} className={`avatar-choice ${ currentAvatar === avatar ? 'selected' : '' }`} onClick={() => handleAvatarSelect(avatar)} > 
+                                <img src={`/avatars/${avatar}`} alt={avatar.replace('.webp', '')} /> 
+                            </button> ))} 
+                        </div> 
+                    </div> 
+                </div> )}
 
             <button type="submit">Save</button>
 
         </form>
+
+    </section>
         <p>{error}</p>
     </>
   )

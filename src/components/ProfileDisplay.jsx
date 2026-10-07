@@ -19,7 +19,6 @@ const ProfileDisplay = () => {
 
     return (
         <>
-            <section className="s1profile">
                 <img src={urlimg} alt="photo de profil" />
                 <div className="d1profile">
                     <p>{user?.pseudo}</p>
@@ -28,7 +27,6 @@ const ProfileDisplay = () => {
                     <Link to="/modify">Modify profile</Link>
                     <button>Logout</button>
                 </div>
-            </section>
         </>
     )
 }
