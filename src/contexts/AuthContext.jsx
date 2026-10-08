@@ -8,6 +8,11 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
 
+  const logout = () => {
+      setAccessToken(null)
+      setUser(null)
+  }
+
     useEffect(() => {
         const controller = new AbortController()
 
@@ -30,7 +35,7 @@ export function AuthProvider({ children }) {
   if (loading) return <p>Chargement...</p>
 
   return (
-    <AuthContext.Provider value={{ accessToken, setAccessToken, user, setUser }}>
+    <AuthContext.Provider value={{ accessToken, setAccessToken, user, setUser, logout }}>
       {children}
     </AuthContext.Provider>
   )

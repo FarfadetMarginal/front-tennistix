@@ -7,7 +7,7 @@ const Modify = () => {
         <>
             <main className="modifymain">
                 <img className="lillogo" src="logotx.webp" alt="logo tennistix" />
-                <section>
+                <section className="s1modify">
                     <ModifyForm />
                 </section>
             </main>

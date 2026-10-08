@@ -3,12 +3,19 @@ import { useAuth } from "../contexts/AuthContext"
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
 import '../styles/components/_profiledisplay.scss'
+import apiService from '../services/apiService'
 
 
 const ProfileDisplay = () => {
-    const { accessToken, authLoading, user } = useAuth()
+    const { accessToken, authLoading, user, logout } = useAuth()
     const navigate = useNavigate()
     const urlimg = `/avatars/${user?.pp}`
+
+    const handleLogout = async () => {
+        await apiService.logout()
+        logout()
+        navigate('/login')
+    }
 
     useEffect(() => {
         if (authLoading) return
@@ -25,7 +32,7 @@ const ProfileDisplay = () => {
                     <Link to="/notif">Notifications</Link>
                     <Link to="/favlist">Favorite list</Link>
                     <Link to="/modify">Modify profile</Link>
-                    <button>Logout</button>
+                    <button onClick={handleLogout}>Logout</button>
                 </div>
         </>
     )

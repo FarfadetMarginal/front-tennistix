@@ -60,15 +60,10 @@ function ModifyForm() {
     
   return (
     <>
-    <section className="s1modify">
         <button className="avatar-edit-button" onClick={() => setAvatarModal(true)} aria-label="Changer de photo de profil"><i className="hgi hgi-stroke hgi-rounded hgi-ai-editing"></i></button>
         <img src={urlimg} alt="photo de profil" />
         <form className="modifyform" onSubmit={handleSubmit}>
             <input className="inputpseudo" type="text" name="pseudo" placeholder={user?.pseudo} onChange={(e) => setPseudo(e.target.value)} />
-
-            <input className="input2" type="email" name="mail" placeholder={user?.email} onChange={(e) => setEmail(e.target.value)} />
-
-            <input className="input2" type="password" name="password" placeholder="New password" onChange={(e) => setPassword(e.target.value)} />
 
             {avatarModal && (
                 <div className="avatar-modal-overlay" onClick={() => setAvatarModal(false)}> 
@@ -82,11 +77,15 @@ function ModifyForm() {
                     </div> 
                 </div> )}
 
+            <input className="input2" type="email" name="mail" placeholder={user?.email} onChange={(e) => setEmail(e.target.value)} />
+
+            <input className="input2" type="password" name="password" placeholder="New password" onChange={(e) => setPassword(e.target.value)} />
+
+
             <button type="submit">Save</button>
 
         </form>
 
-    </section>
         <p>{error}</p>
     </>
   )
