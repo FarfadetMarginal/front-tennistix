@@ -3,6 +3,7 @@ import { useAuth } from "../contexts/AuthContext"
 import { useNavigate } from "react-router-dom"
 import apiService from '../services/apiService'
 import NotifsDisplay from "../components/NotifsDisplay"
+import NavBar from "../components/Navbar"
 
 const Notifs = () => {
 
@@ -30,6 +31,7 @@ const Notifs = () => {
                 <section className="s1notifs">
                     <NotifsDisplay users={request} />
                 </section>
+                <NavBar />
             </main>
             {/* <Footer /> */}
         </>

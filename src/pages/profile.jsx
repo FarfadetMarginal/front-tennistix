@@ -1,5 +1,6 @@
 import '../styles/pages/_profile.scss'
 import ProfileDisplay from "../components/ProfileDisplay"
+import NavBar from '../components/Navbar'
 
 const Profile = () => {
     return (
@@ -9,6 +10,7 @@ const Profile = () => {
                 <section className="s1profile">
                     <ProfileDisplay />
                 </section>
+                <NavBar />
             </main>
             {/* <Footer /> */}
         </>

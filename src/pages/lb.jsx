@@ -5,6 +5,7 @@ import apiService from '../services/apiService'
 import LbDisplay from "../components/LbDisplay"
 import LbFilters from "../components/filterbarlb"
 import '../styles/pages/_lb.scss'
+import NavBar from "../components/Navbar"
 
 
 const Leaderboard = () => {
@@ -48,7 +49,7 @@ const Leaderboard = () => {
             <section className="s1lb">
                 <LbDisplay data={data} type={type} />
             </section>
-
+        <NavBar />
         </main>
         </>
     )
