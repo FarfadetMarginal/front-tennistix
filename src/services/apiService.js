@@ -189,7 +189,7 @@ const apiService = {
     },
 
     async acceptRequest(accessToken, id, signal){
-        const req = await fetch(`${BASE_URL}/friend/accept/${id}`, {
+        const req = await fetch(`${BASE_URL}/friends/accept/${id}`, {
             method : 'PATCH',
             headers : {
                 'Content-Type' : 'application/json',
@@ -206,7 +206,7 @@ const apiService = {
     },
 
     async declineRequest(accessToken, id, signal){
-        const req = await fetch(`${BASE_URL}/friend/decline/${id}`, {
+        const req = await fetch(`${BASE_URL}/friends/decline/${id}`, {
             method : 'DELETE',
             headers : {
                 'Content-Type' : 'application/json',
@@ -223,7 +223,24 @@ const apiService = {
     },
 
     async getFriends(accessToken, signal){
-        const req = await fetch(`${BASE_URL}/friend/list`, {
+        const req = await fetch(`${BASE_URL}/friends/list`, {
+            method : 'GET',
+            headers : {
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
+            },
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
+    },
+
+    async getRequests(accessToken, signal){
+        const req = await fetch(`${BASE_URL}/friends/requestlist`, {
             method : 'GET',
             headers : {
                 'Content-Type' : 'application/json',
