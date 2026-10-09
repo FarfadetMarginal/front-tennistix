@@ -1,6 +1,5 @@
 
 import ModifyForm from "../components/ModifyForm";
-import NavBar from "../components/Navbar";
 import '../styles/pages/_modify.scss'
 
 const Modify = () => {
@@ -11,7 +10,6 @@ const Modify = () => {
                 <section className="s1modify">
                     <ModifyForm />
                 </section>
-                <NavBar />
             </main>
         </>
     )

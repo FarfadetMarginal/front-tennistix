@@ -3,7 +3,7 @@ import { useAuth } from "../contexts/AuthContext"
 
 const SearchDisplay = ({ results, mode, query, players }) => {
     const { accessToken } = useAuth()
-
+    
     const handleSendRequest = async (userId) => {
         try {
             await apiService.sendRequest(accessToken, userId)
@@ -21,6 +21,9 @@ const SearchDisplay = ({ results, mode, query, players }) => {
         <div className='divsearch'>
             {displayed.map(item => (
                 <div key={item.id}>
+                    {mode === 'users' && (
+                        <img src={`/avatars/${item?.pp}`} alt="profile picture" />
+                    )}
                     <p>{mode === 'players' ? item.name : item.pseudo}</p>
                     {mode === 'users' && (
                         <button onClick={() => handleSendRequest(item.id)}>Add friend</button>

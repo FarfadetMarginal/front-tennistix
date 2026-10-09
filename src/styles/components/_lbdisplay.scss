@@ -9,29 +9,47 @@
     .leaderboard{
         .lb-row{
             background-color: white;
-            border-radius: 30px;
+            border-radius: 40px;
             margin: 10px 0px;
-            height: 30px;
+            height: 65px;
             display: flex;
             justify-content: space-between;
             padding: 5px;
             text-align: center;
+            align-items: center;
             span{
                 font-family: $textfont;
-                font-size: 20px;
             }
             .lb-rank{
                 background-color: $colortb;
                 color: white;
                 border-radius: 30px;
-                width: 30px;
-                height: 30px;
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+                align-content: center;
+                font-family: $titlefont;
             }
-            .lb-value{
-                background-color: $colord;
-                color: white;
-                border-radius: 30px;
-                padding: 0 5px;
+            .lbd2{
+                display: grid;
+                .lb-value{
+                    color: black;
+                    border-radius: 30px;
+                    padding: 0 5px;
+                    height: 30px;
+                }
+                .lb-pseudo{
+                    text-align: center;
+                    font-family: $titlefont;
+                    font-size: 24px;
+                }
+            }
+            .lb-pp{
+                img{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 30px;
+                }
             }
         }
     }

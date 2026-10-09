@@ -5,7 +5,6 @@ import apiService from '../services/apiService';
 import '../styles/pages/_home.scss'
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom"
-import NavBar from "../components/Navbar";
 
 
 const Home = () => {
@@ -143,7 +142,6 @@ const Home = () => {
             <MatchDisplay matches={filteredMatches} />
         </section>
 
-        <NavBar />
         <p>{error}</p>
     </main>
     </>

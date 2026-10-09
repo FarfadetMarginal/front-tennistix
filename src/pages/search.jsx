@@ -3,7 +3,6 @@ import { useAuth } from "../contexts/AuthContext"
 import apiService from '../services/apiService'
 import SearchDisplay from "../components/SearchDisplay"
 import '../styles/pages/_search.scss'
-import NavBar from "../components/Navbar"
 
 const Search = () => {
     const { accessToken } = useAuth()
@@ -74,7 +73,6 @@ const Search = () => {
             <SearchDisplay results={results} mode={mode} query={query} players={players} />
                 
             </section>
-            <NavBar />
         </main>
         </>
     )
