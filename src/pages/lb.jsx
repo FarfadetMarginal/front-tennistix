@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useAuth } from "../contexts/AuthContext"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import apiService from '../services/apiService'
 import LbDisplay from "../components/LbDisplay"
 import LbFilters from "../components/filterbarlb"
@@ -43,7 +43,7 @@ const Leaderboard = () => {
         <>
         <main className="lbmain">
 
-            <img className="lillogo" src="logotx.webp" alt="logo tennistix" />
+            <Link to="/"><img className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
             <LbFilters type={type} setType={setType} scope={scope} setScope={setScope} />
             <section className="s1lb">
                 <LbDisplay data={data} type={type} />

@@ -3,7 +3,7 @@ function LbDisplay({ data, type }) {
         <div className="leaderboard">
             {data.map((row, index) => (
                 <div className="lb-row" key={row.pseudo}>
-                    <span className="lb-pp"><img src={`/avatars/${row?.pp}`} alt="profile picture" /></span>
+                    <img src={`/avatars/${row?.pp}`} alt="profile picture" />
                     <div className="lbd2">
                         <span className="lb-pseudo">{row.pseudo}</span>
                         {type === 'score' 

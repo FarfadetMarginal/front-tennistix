@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as *;
+@use '../components/notifsdisplay' ;
+
+.notifsmain{
+    text-align: center;
+    padding: 10px;
+    max-width: 1440px;
+    margin: auto;
+    .lillogo{
+        width: 45px;
+        justify-self: center;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    
+}

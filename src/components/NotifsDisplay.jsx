@@ -44,15 +44,18 @@ const NotifsDisplay = ({users}) => {
     }
     return (
         <>
-            <div className="d1notifs">
-                 {localUsers.map(user => (
-                    <div className="d2notifs" key={user.sender_id}>
-                        <p>{user?.pseudo} sent you a friend request</p>
-                        <button onClick={() => handleAccept(user.sender_id)}>Accept</button>
-                        <button onClick={() => handleDecline(user.sender_id)}>Decline</button>
-                    </div>
-                 ))}
+            {localUsers.map(user => (
+            <div className="d1notifs" key={user.sender_id}>
+                <div className="infodivnotifs">
+                    <img src={`/avatars/${user?.pp}`}alt="profile picture" />
+                    <p>{user?.pseudo} sent you a friend request</p>
+                </div>
+                <div className="buttondivnotifs">
+                    <button onClick={() => handleAccept(user.sender_id)}>Accept</button>
+                    <button className="declinebutton" onClick={() => handleDecline(user.sender_id)}>Decline</button>
+                </div>
             </div>
+            ))}
             <p>{error}</p>
         </>
     )

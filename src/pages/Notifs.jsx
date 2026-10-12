@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react"
 import { useAuth } from "../contexts/AuthContext"
-import { useNavigate } from "react-router-dom"
 import apiService from '../services/apiService'
 import NotifsDisplay from "../components/NotifsDisplay"
+import '../styles/pages/_notifs.scss'
+import { Link } from "react-router-dom"
 
 const Notifs = () => {
 
@@ -26,7 +27,7 @@ const Notifs = () => {
     return (
         <>
             <main className="notifsmain">
-                <img className="lillogo" src="logotx.webp" alt="logo tennistix" />
+                <Link to="/"><img className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
                 <section className="s1notifs">
                     <NotifsDisplay users={request} />
                 </section>

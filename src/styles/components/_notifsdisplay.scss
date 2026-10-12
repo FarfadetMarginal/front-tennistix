@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.d1notifs{
+        background-color: white;
+        border-radius: 30px;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0px;
+        .infodivnotifs{
+            display: flex;
+            align-items: center;
+            p{
+                font-size: 20px;
+                font-family: $textfont;
+                padding: 10px;
+            }
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 30px;
+                margin-left: 5px;
+            }
+
+        }
+        button{
+            background-color: $colorh;
+            border-radius: 30px;
+            height: 30px;
+            color: white;
+            font-family: $textfont;
+            border-style: none;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .declinebutton{
+            background-color: $colortb;
+        }
+    }

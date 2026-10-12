@@ -40,8 +40,8 @@ function MatchDisplay({ matches }) {
                     {/* Affiché si le match est terminé ou live */}
                     {match.type === 'finished' && (
                         <div className="match-score">
-                            <div className="match-details"><p>{match.player1}</p><span>{match.scorep1}</span></div>
-                            <div className="match-details"><p>{match.player2}</p><span>{match.scorep2}</span></div>
+                            <div className={match.winner === 1 ? "match-details match-details-winner" : "match-details match-details-loser"}><p>{match.player1}</p><span>{match.scorep1}</span></div>
+                            <div className={match.winner === 2 ? "match-details match-details-winner" : "match-details match-details-loser"}><p>{match.player2}</p><span>{match.scorep2}</span></div>
                         </div>
                     )}
 

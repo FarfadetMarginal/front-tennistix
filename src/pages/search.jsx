@@ -3,6 +3,7 @@ import { useAuth } from "../contexts/AuthContext"
 import apiService from '../services/apiService'
 import SearchDisplay from "../components/SearchDisplay"
 import '../styles/pages/_search.scss'
+import { Link } from "react-router-dom"
 
 const Search = () => {
     const { accessToken } = useAuth()
@@ -34,7 +35,7 @@ const Search = () => {
     return (
         <>
         <main className="searchmain">
-            <img className="lillogo" src="logotx.webp" alt="logo tennistix" />
+            <Link to="/"><img className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
             <section className="s1search">
 
             <div className="checkbox-wrapper-35">

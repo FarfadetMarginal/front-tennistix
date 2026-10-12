@@ -1,11 +1,12 @@
 import '../styles/pages/_profile.scss'
 import ProfileDisplay from "../components/ProfileDisplay"
+import { Link } from "react-router-dom"
 
 const Profile = () => {
     return (
         <>
             <main className="profilemain">
-            <img className="lillogo" src="logotx.webp" alt="logo tennistix" />
+            <Link to="/"><img className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
                 <section className="s1profile">
                     <ProfileDisplay />
                 </section>
