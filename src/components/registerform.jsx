@@ -51,8 +51,8 @@ function RegisterForm() {
                 <p>Already have an account ? </p>
                 <Link to="/login">Login</Link>
             </div>
+            <p>{error}</p>
         </form>
-        <p>{error}</p>
     </>
   )
 }

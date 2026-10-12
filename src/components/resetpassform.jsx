@@ -17,7 +17,7 @@ function ResetPassForm() {
         try {
             setLoading(true)
             setError(null)
-            const datas = await apiService.resetpass(token, email, newPassword, controller.signal)
+            await apiService.resetpass(token, email, newPassword, controller.signal)
             navigate('/login');
         } catch (err) {
             if(err.name !== 'AbortError') {
@@ -36,7 +36,9 @@ function ResetPassForm() {
 
   return (
     <>
-        <form onSubmit={handleSubmit}>
+        <form className="authform" onSubmit={handleSubmit}>
+            <h1>Confirm your mail and enter your new password</h1>
+
             <label htmlFor="mail">Mail</label>
             <input type="email" name="mail" placeholder="Enter your mail adress" onChange={(e) => setEmail(e.target.value)} />
 

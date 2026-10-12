@@ -57,8 +57,8 @@ function LoginForm() {
                 <p>Don't have an account ? </p>
                 <Link to="/register">Register</Link>
             </div>
+            <p>{error}</p>
         </form>
-        <p>{error}</p>
     </>
   )
 }

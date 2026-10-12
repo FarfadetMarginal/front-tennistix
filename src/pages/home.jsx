@@ -45,6 +45,8 @@ const Home = () => {
                     scorep2: match.score?.games[1],
                     pointp1: match.score?.points[0],
                     pointp2: match.score?.points[1],
+                    round: match.round,
+                    server: match.score?.server
                 }))
 
                 const incoming = (incomingData.data || []).map(match => ({
@@ -54,7 +56,8 @@ const Home = () => {
                     tour: match.tour,
                     tournament: match.tournament,
                     date: match.start_time,
-                    type: "incoming"
+                    type: "incoming",
+                    round: match.round
                 }))
 
                 const finishedATP = (finishedATPData.data || []).map(match => ({
@@ -67,7 +70,8 @@ const Home = () => {
                     type: "finished",
                     winner: match.winner,
                     scorep1: match.score?.games[0],
-                    scorep2: match.score?.games[1]
+                    scorep2: match.score?.games[1],
+                    round: match.round
                 }))
 
                 const finishedWTA = (finishedWTAData.data || []).map(match => ({
@@ -80,7 +84,8 @@ const Home = () => {
                     type: "finished",
                     winner: match.winner,
                     scorep1: match.score?.games[0],
-                    scorep2: match.score?.games[1]
+                    scorep2: match.score?.games[1],
+                    round: match.round
                 }))
 
                 setMatches([

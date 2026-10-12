@@ -10,10 +10,8 @@
     box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
     padding-bottom: 40px;
 
-    /* Active la 3D pour gérer la profondeur sans casser les arrière-plans */
     transform-style: preserve-3d;
 
-    // stick to end page
     top: 20px;
 
 
@@ -28,22 +26,22 @@
         box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.10);
     }
 
-    /* 1er sous-plan (juste derrière) */
+
     &::before {
         top: -12px;
         left: 10px;  
         right: 10px;
-        /* Décale physiquement l'élément vers l'arrière sur l'axe Z */
+
         transform: translateZ(-1px);
     }
     
 
-    /* 2e sous-plan (tout au fond) */
+
     &::after {
         top: -22px;
         left: 20px;  
         right: 20px;
-        /* Décale encore plus vers l'arrière */
+
         transform: translateZ(-2px);
     }
     text-align: start;

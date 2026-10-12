@@ -42,6 +42,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        .match-server{
+            &::after {
+                font-family: 'hugeicons-stroke-rounded';
+                content: "󲟔";
+                font-size: 20px;
+                line-height: 1;
+                background-color: chartreuse;
+                padding: 0;
+                border-radius: 30px;
+                margin-left: 15px;
+            }
+        }
         .match-details-live{
             display: flex;
             .match-details-games{
@@ -51,6 +63,7 @@
                 letter-spacing: 0px;
                 padding: 0 5px;
                 width: 25px;
+                color: $colord;
             }
         }
         >span{
@@ -63,17 +76,19 @@
             border-style: none;
             border-radius: 30px;
             padding: 8px;
+            cursor: pointer;
         }
     }
     .match-details-loser{
         color: $colorplaceholder;
     }
-    
+
     .match-header{
         font-size: 18px;
         font-weight: 400;
         display: flex;
         gap: 10px;
+        color: $colortb;
     }
 
     .match-infos{
