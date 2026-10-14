@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as *;
+@use '../components/matchdisplay' ;
+
+.notfoundmain{
+    text-align: center;
+    padding: 5px;
+    .lillogo{
+        width: 45px;
+        justify-self: center;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    .s1notfound{
+        h1, h2{
+            color: black;
+            font-family: $titlefont;
+        }
+        h1{
+            font-size: 78px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        h2{
+            font-size: 30px;
+            margin-top: 0;
+        }
+    }
+}

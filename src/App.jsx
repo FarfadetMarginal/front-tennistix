@@ -9,7 +9,7 @@ import Search from "./pages/search";
 import Profile from "./pages/profile";
 import Modify from "./pages/modify";
 import Notifs from "./pages/Notifs";
-// import NotFound from './pages/notfound';
+import NotFound from './pages/NotFound';
 import NavBar from "./components/Navbar";
 
 // Layout avec la NavBar permanente
@@ -40,7 +40,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/forgotpass" element={<ForgotPass />} />
       <Route path="/resetpass/:token" element={<ResetPass />} />
-      {/* <Route path="*" element={<NotFound />}/> */}
+      <Route path="*" element={<NotFound />}/>
     </Routes>
   );
 }

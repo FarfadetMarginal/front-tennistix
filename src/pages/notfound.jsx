@@ -1,0 +1,18 @@
+import '../styles/pages/_notfound.scss'
+import { Link } from "react-router-dom"
+
+const NotFound = () => {
+    return (
+        <>
+            <main className="notfoundmain">
+            <Link to="/"><img className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
+                <section className="s1notfound">
+                    <h1>404</h1>
+                    <h2>Not Found</h2>
+                </section>
+            </main>
+        </>
+    )
+}
+
+export default NotFound
