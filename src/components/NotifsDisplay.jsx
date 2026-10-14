@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
 import '../styles/components/_profiledisplay.scss'
 import apiService from '../services/apiService'
+import Loader from "./Loader"
 
 
 const NotifsDisplay = ({users}) => {
@@ -22,7 +23,7 @@ const NotifsDisplay = ({users}) => {
         setUsers(users)
     }, [users])
 
-    if (authLoading) return <p>Chargement...</p>
+    if (authLoading) return <Loader />
     
 
     const handleAccept = async (id) => {

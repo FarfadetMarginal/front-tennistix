@@ -5,6 +5,7 @@ import apiService from '../services/apiService';
 import '../styles/pages/_home.scss'
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate, Link } from "react-router-dom"
+import Loader from "../components/Loader";
 
 
 
@@ -125,7 +126,7 @@ const Home = () => {
     })
 
     if(loading) {
-        return <p>Chargement...</p>
+        return <Loader />
     }
 
     if (error) { 

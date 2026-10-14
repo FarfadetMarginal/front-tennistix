@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
 import '../styles/components/_profiledisplay.scss'
 import apiService from '../services/apiService'
+import Loader from "./Loader"
 
 
 const ProfileDisplay = () => {
@@ -22,7 +23,7 @@ const ProfileDisplay = () => {
         if (!accessToken) { navigate('/login'); return }
     }, [accessToken, authLoading]) // se relance quand les filtres changent
 
-    if (authLoading) return <p>Chargement...</p>
+    if (authLoading) return <Loader />
 
     return (
         <>

@@ -5,6 +5,7 @@ import apiService from '../services/apiService'
 import LbDisplay from "../components/LbDisplay"
 import LbFilters from "../components/filterbarlb"
 import '../styles/pages/_lb.scss'
+import Loader from "../components/Loader"
 
 
 const Leaderboard = () => {
@@ -36,7 +37,7 @@ const Leaderboard = () => {
         return () => controller.abort()
     }, [accessToken, authLoading, type, scope]) // se relance quand les filtres changent
 
-    if (loading) return <p>Chargement...</p>
+    if (loading) return <Loader />
     if (error) return <p>{error}</p>
 
     return (

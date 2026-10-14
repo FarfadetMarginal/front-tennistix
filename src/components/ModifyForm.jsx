@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import apiService from '../services/apiService';
 import { useAuth } from "../contexts/AuthContext"
 import { useNavigate } from "react-router-dom"
+import Loader from "./Loader";
 
 
 const Avatars = ['blaireau.webp', 'bouledogue.webp', 'bull.webp', 'chien.webp', 'coq.webp', 'croco.webp', 'fox.webp', 'goat.webp', 'gorille.webp', 'koala.webp', 'lapin.webp', 'leopard.webp', 'lion.webp', 'loup.webp', 'lynx.webp', 'ours.webp', 'owl.webp', 'panthere.webp', 'rhino.webp', 'tigre.webp']
@@ -51,7 +52,7 @@ function ModifyForm() {
         }
     }
 
-    if(loading) return <p>Chargement...</p>
+    if(loading) return <Loader />
 
     function handleAvatarSelect(avatar) {
         setPp(avatar)

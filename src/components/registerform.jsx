@@ -1,6 +1,7 @@
 import { useState } from "react"
 import apiService from '../services/apiService';
 import { Link } from "react-router-dom"
+import Loader from "./Loader";
 
 function RegisterForm() {
     const [pseudo, setPseudo] = useState(null)
@@ -30,7 +31,7 @@ function RegisterForm() {
         }
     }
 
-    if(loading) return <p>Chargement...</p>
+    if(loading) return <Loader />
 
   return (
     <>

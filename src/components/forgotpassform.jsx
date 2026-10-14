@@ -1,6 +1,7 @@
 import { useState } from "react"
 import apiService from '../services/apiService';
 import { useNavigate } from "react-router-dom";
+import Loader from "./Loader";
 
 
 function ForgotPassForm() {
@@ -30,7 +31,7 @@ function ForgotPassForm() {
         }
     }
 
-    if(loading) return <p>Chargement...</p>
+    if(loading) return <Loader />
 
   return (
     <>

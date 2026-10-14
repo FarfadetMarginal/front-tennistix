@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import apiService from '../services/apiService';
+import Loader from "./Loader";
 
 
 function ResetPassForm() {
@@ -32,7 +33,7 @@ function ResetPassForm() {
         }
     }
 
-    if(loading) return <p>Chargement...</p>
+    if(loading) return <Loader />
 
   return (
     <>

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 import apiService from '../services/apiService';
 import { Link } from "react-router-dom"
 import { useAuth } from "../contexts/AuthContext";
+import Loader from "./Loader";
 
 function LoginForm() {
     const [email, setEmail] = useState(null)
@@ -38,7 +39,7 @@ function LoginForm() {
         }
     }
 
-    if(loading) return <p>Chargement...</p>
+    if(loading) return <Loader />
 
   return (
     <>

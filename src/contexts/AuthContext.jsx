@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react"
 import apiService from '../services/apiService'
+import Loader from "../components/Loader"
 
 const AuthContext = createContext()
 
@@ -32,7 +33,7 @@ export function AuthProvider({ children }) {
         return () => controller.abort()
     }, [])
 
-  if (loading) return <p>Chargement...</p>
+  if (loading) return <Loader />
 
   return (
     <AuthContext.Provider value={{ accessToken, setAccessToken, user, setUser, logout }}>
