@@ -9,6 +9,7 @@ const NotFound = () => {
                 <section className="s1notfound">
                     <h1>404</h1>
                     <h2>Not Found</h2>
+                    <img src="404webp.png" alt="blue marble racket and ball" />
                 </section>
             </main>
         </>
