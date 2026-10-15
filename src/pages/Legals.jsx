@@ -1,6 +1,9 @@
 import '../styles/pages/_profile.scss'
-import ProfileDisplay from "../components/ProfileDisplay"
 import { Link } from "react-router-dom"
+import CGU from '../components/CGU'
+import RGPD from '../components/RGPD'
+import Conf from '../components/conf'
+import MentionsLegales from '../components/mentionslegales'
 
 const Legals = () => {
     return (
@@ -8,16 +11,18 @@ const Legals = () => {
             <main className="legalsmain">
             <Link to="/"><img className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
                 <section className="s1legals">
-                    <ProfileDisplay />
+                    <CGU />
                 </section>
                 <section className="s2legals">
-                    <ProfileDisplay />
+                    <RGPD />
                 </section>
                 <section className="s3legals">
-                    <ProfileDisplay />
+                    <Conf />
+                </section>
+                <section className="s4legals">
+                    <MentionsLegales />
                 </section>
             </main>
-            {/* <Footer /> */}
         </>
     )
 }

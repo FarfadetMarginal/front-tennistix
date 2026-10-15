@@ -1,6 +1,13 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-.match{
-    @include match;
+
+.sectionmatches{
+    .match{
+        @include match;
+    }
+    @media (min-width: 1024px) {
+        max-width: 650px;
+        margin: auto;
+    }
 }
