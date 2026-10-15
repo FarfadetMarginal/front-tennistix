@@ -1,0 +1,48 @@
+@use '../abstracts/variables' as *;
+
+
+.legalsmain{
+    text-align: center;
+    padding: 5px;
+    .lillogo{
+        width: 45px;
+        justify-self: center;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    section{
+        font-family: $textfont;
+        text-align: start;
+        padding-bottom: 50px;
+        a{
+            color: $colorh;
+        }
+        @media (min-width: 1024px) {
+            max-width: 650px;
+            margin: auto;
+        }
+
+    }
+    
+}
+.legal-language {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin: 0 auto 24px;
+
+    button {
+        border: 1px solid #222;
+        border-radius: 18px;
+        padding: 6px 12px;
+        background: transparent;
+        color: #222;
+        cursor: pointer;
+        font: inherit;
+
+        &.selected {
+            background: #222;
+            color: white;
+        }
+    }
+}

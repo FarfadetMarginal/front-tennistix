@@ -1,83 +1,32 @@
 function Conf() {
-    return (
-        <>
-            <h2>Politique de confidentialité</h2>
-            <p>Tennistix</p>
-
-            <h3>Article 1 : Préambule</h3>
-            <p>La présente politique de confidentialité a pour but d'informer les utilisateurs du site sur la manière dont leurs données personnelles sont collectées, leurs droits concernant ces données, la personne responsable du traitement, les destinataires des données et la politique du site en matière de cookies.</p>
-            <p>Cette politique complète les mentions légales et les Conditions générales d'utilisation consultables sur le site Tennistix.</p>
-
-            <h3>Article 2 : Principes relatifs à la collecte et au traitement des données personnelles</h3>
-            <p>Conformément à l'article 5 du règlement européen 2016/679, les données à caractère personnel sont :</p>
-            <ul>
-                <li>traitées de manière licite, loyale et transparente au regard de la personne concernée ;</li>
-                <li>collectées pour des finalités déterminées, explicites et légitimes, et ne sont pas traitées ultérieurement d'une manière incompatible avec ces finalités ;</li>
-                <li>adéquates, pertinentes et limitées à ce qui est nécessaire au regard des finalités du traitement ;</li>
-                <li>exactes et, si nécessaire, tenues à jour ; les mesures raisonnables sont prises pour rectifier ou effacer sans tarder les données inexactes ;</li>
-                <li>conservées sous une forme permettant l'identification des personnes pendant une durée n'excédant pas celle nécessaire aux finalités du traitement ;</li>
-                <li>traitées de façon à garantir une sécurité appropriée, notamment contre le traitement non autorisé ou illicite, la perte, la destruction ou les dégâts accidentels.</li>
-            </ul>
-            <p>Le traitement est licite si au moins l'une des conditions suivantes est remplie :</p>
-            <ul>
-                <li>la personne concernée a consenti au traitement pour une ou plusieurs finalités spécifiques ;</li>
-                <li>le traitement est nécessaire à l'exécution d'un contrat ou de mesures précontractuelles prises à la demande de la personne ;</li>
-                <li>le traitement est nécessaire au respect d'une obligation légale ;</li>
-                <li>le traitement est nécessaire à la sauvegarde des intérêts vitaux d'une personne physique ;</li>
-                <li>le traitement est nécessaire à l'exécution d'une mission d'intérêt public ou relevant de l'autorité publique ;</li>
-                <li>le traitement est nécessaire aux fins des intérêts légitimes poursuivis par le responsable du traitement ou par un tiers, sauf si prévalent les droits et libertés fondamentaux de la personne concernée.</li>
-            </ul>
-
-            <h3>Article 3 : Données personnelles collectées et traitées dans le cadre de la navigation sur le site</h3>
-            <h4>Article 3.1 : Données collectées</h4>
-            <p>Les données personnelles collectées dans le cadre de l'activité sont :</p>
-            <ul>
-                <li>adresse e-mail ;</li>
-                <li>identifiant ;</li>
-                <li>mot de passe ;</li>
-                <li>historique de pronostics.</li>
-            </ul>
-            <p>La collecte et le traitement de ces données ont pour finalités l'inscription et la connexion pour accéder aux fonctionnalités du Site, l'affichage des informations sur la page de profil, la gestion des pronostics et le classement (leaderboard).</p>
-
-            <h4>Article 3.2 : Mode de collecte des données</h4>
-            <p>Lorsque vous utilisez le Site, les données suivantes sont collectées :</p>
-            <ul>
-                <li>adresse e-mail ;</li>
-                <li>identifiant ;</li>
-                <li>mot de passe ;</li>
-                <li>historique de pronostics.</li>
-            </ul>
-            <p>Elles sont conservées par le responsable du traitement dans des conditions raisonnables de sécurité pendant une durée de cinq ans en cas d'inactivité. Certaines données peuvent être conservées au-delà de ce délai afin de remplir des obligations légales ou réglementaires.</p>
-
-            <h4>Article 3.3 : Hébergement des données</h4>
-            <p>Le site Tennistix est hébergé par Vercel, 102 avenue des Champs-Élysées, 75008 Paris.</p>
-
-            <h3>Article 4 : Responsable du traitement des données et délégué à la protection des données</h3>
-            <h4>Article 4.1 : Responsable du traitement des données</h4>
-            <p>Le responsable du traitement peut être contacté par e-mail à l'adresse <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>.</p>
-            <h4>Article 4.2 : Délégué à la protection des données</h4>
-            <p>Le délégué à la protection des données est Baptiste COUTAS, joignable à l'adresse <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>.</p>
-            <p>Si vous estimez, après nous avoir contactés, que vos droits « Informatique et Libertés » ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL.</p>
-
-            <h3>Article 5 : Droits de l'utilisateur en matière de collecte et de traitement des données</h3>
-            <p>Tout utilisateur concerné peut se prévaloir des droits suivants, en application du règlement européen 2016/679 et de la loi Informatique et Libertés (loi n° 78-17 du 6 janvier 1978) :</p>
-            <ul>
-                <li>droit d'accès, de rectification et droit à l'effacement (articles 15, 16 et 17 du RGPD) ;</li>
-                <li>droit à la portabilité des données (article 20 du RGPD) ;</li>
-                <li>droit à la limitation (article 18 du RGPD) et à l'opposition au traitement (article 21 du RGPD) ;</li>
-                <li>droit de ne pas faire l'objet d'une décision fondée exclusivement sur un procédé automatisé ;</li>
-                <li>droit de déterminer le sort des données après la mort ;</li>
-                <li>droit de saisir l'autorité de contrôle compétente (article 77 du RGPD).</li>
-            </ul>
-            <p>Pour exercer vos droits, veuillez adresser votre demande à Baptiste COUTAS par courrier ou par e-mail à <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>. Afin de traiter la demande, l'utilisateur peut être invité à communiquer certaines informations, telles que ses nom et prénom, son adresse e-mail et son numéro de compte ou d'espace personnel.</p>
-            <p>Consultez le site <a href="https://www.cnil.fr/" target="_blank" rel="noreferrer">cnil.fr</a> pour plus d'informations sur vos droits.</p>
-
-            <h3>Article 6 : Modification de la politique de confidentialité</h3>
-            <p>L'Éditeur se réserve le droit de modifier la présente politique à tout moment afin d'assurer sa conformité avec le droit en vigueur. Les éventuelles modifications n'ont pas d'incidence sur les achats antérieurement effectués, qui restent soumis à la politique en vigueur au moment de l'achat et acceptée par l'utilisateur lors de sa validation. L'utilisateur est invité à prendre connaissance de cette politique à chaque utilisation des services.</p>
-            <p>La présente politique a été éditée et mise à jour le 28/09/2026.</p>
-        </>
-    )
+  return (
+    <>
+      <h2>Politique de confidentialité</h2>
+      <p><strong>Version de travail — ne pas publier en l’état. France / EEE · 15/10/2026.</strong></p>
+      <h3>Responsable et données traitées</h3>
+      <p>Le responsable du traitement indiqué pour le projet est Baptiste COUTAS, personne physique, joignable à <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>. Tennistix vise initialement la France et l’EEE. Le statut juridique, les coordonnées et la nécessité éventuelle d’un DPO restent à confirmer.</p>
+      <p>Les fonctionnalités repérées utilisent l’adresse e-mail, le pseudonyme, un mot de passe haché, un identifiant de compte, un avatar, les pronostics et scores, les favoris, les relations d’amitié et des jetons de session/réinitialisation de mot de passe.</p>
+      <h3>Finalités et fondements envisagés</h3>
+      <ul>
+        <li>Créer et gérer un compte, authentifier l’utilisateur et fournir les fonctions demandées : exécution du service demandé.</li>
+        <li>Enregistrer pronostics, scores, classement, favoris et amis : fonctionnement des fonctionnalités demandées.</li>
+        <li>Réinitialiser le mot de passe, sécuriser le service et prévenir les abus : fonctionnement du service et intérêt légitime de sécurité, à documenter.</li>
+      </ul>
+      <p>Ces fondements doivent être validés après inventaire des traitements. Aucune donnée de paiement n’est nécessaire dans la version décrite : les points sont gratuits, sans valeur et sans récompense.</p>
+      <h3>Destinataires et fournisseurs</h3>
+      <p>L’accès est limité à l’éditeur et aux prestataires nécessaires. Le code indique Vercel pour le site, Render pour l’API, Brevo pour les e-mails de réinitialisation, LiveTennisAPI pour les données sportives, ainsi que des polices chargées depuis Google Fonts. L’éditeur indique que PostgreSQL est hébergé par Supabase. Les entités contractuelles, régions de traitement, sous-traitants et éventuels transferts hors EEE restent à vérifier avant publication.</p>
+      <h3>Conservation et suppression</h3>
+      <p><strong>À fixer avant publication.</strong> L’éditeur indique actuellement que les données sont conservées indéfiniment. Les données personnelles identifiantes ne doivent pas être conservées indéfiniment sans justification : une durée proportionnée doit être définie par finalité.</p>
+      <p>Projet à valider : données du compte pendant la vie du compte; après une demande de suppression par e-mail, effacement ou anonymisation des données actives dans un délai <strong>[À FIXER]</strong>, y compris pronostics et relations d’amitié selon une règle documentée. Purge des sauvegardes : <strong>[À FIXER]</strong>. Des données strictement nécessaires peuvent être conservées séparément si la loi ou un litige l’exige.</p>
+      <h3>Vos droits</h3>
+      <p>Selon les conditions du RGPD, vous pouvez demander l’accès, la rectification, l’effacement, la limitation, la portabilité lorsque celle-ci est applicable, ou vous opposer à un traitement fondé sur l’intérêt légitime. Vous pouvez retirer un consentement lorsque le traitement repose sur celui-ci. Contact : <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>. Vous pouvez également saisir la CNIL ou l’autorité de contrôle compétente dans l’EEE. Aucun DPO n’est confirmé dans ce brouillon.</p>
+      <h3>Mineurs</h3>
+      <p>Tennistix est prévu pour tous les âges. Les informations doivent être simples et adaptées aux mineurs. Dans l’EEE, l’âge auquel un mineur peut consentir seul à un traitement fondé sur le consentement dans un service en ligne varie de 13 à 16 ans selon le pays; il est de 15 ans en France. Sous le seuil applicable, le consentement du parent ou représentant légal et celui du mineur sont requis pour les traitements concernés. Le parcours parental et les modalités d’acceptation des conditions par les mineurs ne sont pas confirmés comme opérationnels.</p>
+      <h3>Cookies et traceurs</h3>
+      <p>Le serveur définit un cookie d’authentification nommé <code>tokenRefresh</code>, avec les attributs HttpOnly, Secure, SameSite=None et une durée maximale de sept jours. Sa finalité d’authentification doit être confirmée. Le code importe des polices de Google Fonts. Aucun outil d’analytique ou de publicité n’a été repéré dans les fichiers examinés; l’inventaire doit être vérifié dans la version déployée. Tout traceur non exempté nécessite le consentement préalable applicable, avec un refus aussi simple que l’acceptation.</p>
+      <aside style={{ padding: "12px", background: "#fff7db", border: "1px solid #e8d99b" }}><strong>À finaliser avant publication :</strong> durées de conservation et effacement, hébergement et transferts, parcours mineurs, fondement juridique final et inventaire des traceurs.</aside>
+    </>
+  )
 }
 
 export default Conf
-

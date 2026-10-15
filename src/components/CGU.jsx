@@ -1,54 +1,24 @@
-import '../styles/components/_legals.scss'
-
 function CGU() {
-
-    return (
-        <>
-            <h2>Conditions générales d'utilisation</h2>
-            <span>En vigueur au 28/09/2026</span>
-            <p>Les présentes conditions générales d'utilisation (dites « CGU ») ont pour objet l'encadrement juridique des modalités de mise à disposition du site et des services par Tennistix et de définir les conditions d’accès et d’utilisation des services par « l'Utilisateur ».</p>
-            <p>Les présentes CGU sont accessibles sur le site à la rubrique «CGU»</p>
-            <p>Toute inscription ou utilisation du site implique l'acceptation sans aucune réserve ni restriction des présentes CGU par l’utilisateur. Lors de l'inscription sur le site via le Formulaire d’inscription, chaque utilisateur accepte expressément les présentes CGU en cochant la case précédant le texte suivant : «Je reconnais avoir lu et compris les CGU et je les accepte ».
-            En cas de non-acceptation des CGU stipulées dans le présent contrat, l'Utilisateur se doit de renoncer à l'accès des services proposés par le site.
-            Tennistix se réserve le droit de modifier unilatéralement et à tout moment le contenu des présentes CGU.</p>
-            <h3>Article 1 : Les mentions légales</h3>
-            <p>L’édition et la direction de la publication du site Tennistix est assurée par Baptiste COUTAS, domicilié 341 chemin des chataigners.
-            Numéro de téléphone est 0652617997
-            Adresse e-mail bapt935@gmail.com.</p>
-            <p>L'hébergeur du site Tennistix est la société Vercel, dont le siège social est situé au 102 avenue des Champs-Élysées, 75008 Paris</p>
-            <h3>ARTICLE 2 : Accès au site</h3>
-            <p>Le site Tennistix permet à l'Utilisateur un accès gratuit aux services suivants :</p>
-            <p>Affichage de score et informations de matchs de tennis en temps réel, possibilité de pronostiquer leurs issus, gagner des points en fonction des pronostics gagnés, comparer ses points avec ses amis ou global.
-            Le site est accessible gratuitement en tout lieu à tout Utilisateur ayant un accès à Internet. Tous les frais supportés par l'Utilisateur pour accéder au service (matériel informatique, logiciels, connexion Internet, etc.) sont à sa charge.</p>
-            <p>L’Utilisateur non membre n'a pas accès aux services réservés. Pour cela, il doit s’inscrire en remplissant le formulaire. En acceptant de s’inscrire aux services réservés, l’Utilisateur membre s’engage à fournir des informations sincères et exactes concernant son état civil et ses coordonnées, notamment son adresse email.</p>
-            <p>Pour accéder aux services, l’Utilisateur doit ensuite s'identifier à l'aide de son identifiant et de son mot de passe qui lui seront communiqués après son inscription. 
-            Tout Utilisateur membre régulièrement inscrit pourra également solliciter sa désinscription en se rendant à la page dédiée sur son espace personnel. Celle-ci sera effective dans un délai raisonnable. Tout événement dû à un cas de force majeure ayant pour conséquence un dysfonctionnement du site ou serveur et sous réserve de toute interruption ou modification en cas de maintenance, n'engage pas la responsabilité de Tennistix. Dans ces cas, l’Utilisateur accepte ainsi ne pas tenir rigueur à l’éditeur de toute interruption ou suspension de service, même sans préavis. 
-            L'Utilisateur a la possibilité de contacter le site par messagerie électronique à l’adresse email de l’éditeur communiqué à l’ARTICLE 1.</p>
-            <h3>ARTICLE 3 : Collecte des données</h3>
-            <p>Le site assure à l'Utilisateur une collecte et un traitement d'informations personnelles dans le respect de la vie privée conformément à la loi n°78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés.</p>
-            <p>En vertu de la loi Informatique et Libertés, en date du 6 janvier 1978, l'Utilisateur dispose d'un droit d'accès, de rectification, de suppression et d'opposition de ses données personnelles. L'Utilisateur exerce ce droit : · par mail à l'adresse email bapt935@gmail.com</p>
-            <h3>ARTICLE 4 : Propriété intellectuelle</h3>
-            <p>Les marques, logos, signes ainsi que tous les contenus du site (textes, images, son…) font l'objet d'une protection par le Code de la propriété intellectuelle et plus particulièrement par le droit d'auteur.</p>
-            <p>L'Utilisateur doit solliciter l'autorisation préalable du site pour toute reproduction, publication, copie des différents contenus. Il s'engage à une utilisation des contenus du site dans un cadre strictement privé, toute utilisation à des fins commerciales et publicitaires est strictement interdite.</p>
-            <p>Toute représentation totale ou partielle de ce site par quelque procédé que ce soit, sans l’autorisation expresse de l’exploitant du site Internet constituerait une contrefaçon sanctionnée par l’article L 335-2 et suivants du Code de la propriété intellectuelle.</p>
-            <p>Il est rappelé conformément à l’article L122-5 du Code de propriété intellectuelle que l’Utilisateur qui reproduit, copie ou publie le contenu protégé doit citer l’auteur et sa source.</p>
-            <h3>ARTICLE 5 : Responsabilité</h3>
-            <p>Les sources des informations diffusées sur le site Tennistix sont réputées fiables mais le site ne garantit pas qu’il soit exempt de défauts, d’erreurs ou d’omissions.</p>
-            <p>Les informations communiquées sont présentées à titre indicatif et général sans valeur contractuelle. Malgré des mises à jour régulières, le site Tennistix ne peut être tenu responsable de la modification des dispositions administratives et juridiques survenant après la publication. De même, le site ne peut être tenue responsable de l’utilisation et de l’interprétation de l’information contenue dans ce site. L'Utilisateur s'assure de garder son mot de passe secret. Toute divulgation du mot de passe, quelle que soit sa forme, est interdite. Il assume les risques liés à l'utilisation de son identifiant et mot de passe. Le site décline toute responsabilité. 
-            Le site Tennistix ne peut être tenu pour responsable d’éventuels virus qui pourraient infecter l’ordinateur ou tout matériel informatique de l’Internaute, suite à une utilisation, à l’accès, ou au téléchargement provenant de ce site.</p>
-            <p>La responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible et insurmontable d'un tiers.</p>
-            <h3>ARTICLE 6 : Liens hypertextes</h3>
-            <p>Des liens hypertextes peuvent être présents sur le site. L’Utilisateur est informé qu’en cliquant sur ces liens, il sortira du site Tennistix. Ce dernier n’a pas de contrôle sur les pages web sur lesquelles aboutissent ces liens et ne saurait, en aucun cas, être responsable de leur contenu.</p>
-            <h3>ARTICLE 7 : Cookies</h3>
-            <p>L’Utilisateur est informé que lors de ses visites sur le site, un cookie peut s’installer automatiquement sur son logiciel de navigation.</p>
-            <p>Les cookies sont de petits fichiers stockés temporairement sur le disque dur de l’ordinateur de l’Utilisateur par votre navigateur et qui sont nécessaires à l’utilisation du site Tennistix. Les cookies ne contiennent pas d’information personnelle et ne peuvent pas être utilisés pour identifier quelqu’un. Un cookie contient un identifiant unique, généré aléatoirement et donc anonyme. Certains cookies expirent à la fin de la visite de l’Utilisateur, d’autres restent.</p>
-            <p>L’information contenue dans les cookies est utilisée pour améliorer le site Tennistix.</p>
-            <p>En naviguant sur le site, L’Utilisateur les accepte. L’Utilisateur pourra désactiver ces cookies par l’intermédiaire des paramètres figurant au sein de son logiciel de navigation.</p>
-            <h3>ARTICLE 8 : Droit applicable et juridiction compétente</h3>
-            <p>La législation française s'applique au présent contrat. En cas d'absence de résolution amiable d'un litige né entre les parties, les tribunaux français seront seuls compétents pour en connaître. Pour toute question relative à l’application des présentes CGU, vous pouvez joindre l’éditeur aux coordonnées inscrites à l’ARTICLE 1.</p>
-            <p>CGU réalisées sur http://legalplace.fr/</p>
-        </>
-    )
+  return (
+    <>
+      <h2>Conditions générales d’utilisation</h2>
+      <p><strong>Version de travail — ne pas publier en l’état. Dernière révision : 15/10/2026.</strong></p>
+      <p>Tennistix est un service en ligne de suivi de matchs de tennis et de pronostics ludiques. Il est destiné au lancement en France et dans l’Espace économique européen (EEE). Ces conditions ne retirent aucun droit impératif reconnu à l’utilisateur dans son pays de résidence.</p>
+      <h3>Le service et le compte</h3>
+      <p>Le service permet de consulter des informations de matchs, d’enregistrer des pronostics et de comparer des scores virtuels. La création d’un compte nécessite une adresse e-mail, un pseudonyme et un mot de passe. Certaines données sportives peuvent être incomplètes, retardées ou indisponibles car elles proviennent de fournisseurs tiers.</p>
+      <h3>Points et pronostics</h3>
+      <p>Les points sont gratuits, virtuels et non transférables. Ils n’ont aucune valeur monétaire, ne peuvent être achetés ou convertis en argent ou en bien, et ne donnent droit à aucune récompense. Tennistix n’accepte aucune mise d’argent. Toute introduction future de paiement, mise, lot ou récompense devra faire l’objet d’une nouvelle analyse juridique et d’une mise à jour des conditions.</p>
+      <h3>Mineurs</h3>
+      <p>Le projet est prévu pour tous les âges. Dans l’EEE, le seuil auquel un mineur peut consentir seul à certains traitements en ligne varie de 13 à 16 ans selon le pays; il est de 15 ans en France. Avant l’ouverture aux mineurs, l’éditeur doit mettre en place un parcours conforme au pays concerné et adapté à leur capacité à accepter les conditions. Les informations doivent être simples et compréhensibles. <strong>Le parcours parental n’est pas confirmé comme opérationnel.</strong></p>
+      <h3>Règles d’utilisation</h3>
+      <p>L’utilisateur s’engage à fournir des informations exactes, à protéger ses identifiants, à ne pas usurper l’identité d’un tiers, perturber le service, contourner ses protections ou accéder sans autorisation au compte d’autrui. Les marques, données sportives et contenus de tiers restent soumis aux droits de leurs titulaires.</p>
+      <h3>Disponibilité et fermeture du compte</h3>
+      <p>Le service peut être interrompu pour maintenance ou indisponibilité technique. L’éditeur peut suspendre un compte en cas d’usage abusif, de manière proportionnée. La fermeture et l’effacement du compte peuvent être demandés par e-mail à <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>. La procédure est actuellement manuelle; le délai de traitement et la purge des données liées et des sauvegardes sont <strong>à définir avant publication</strong>.</p>
+      <h3>Données personnelles, responsabilité et droit applicable</h3>
+      <p>Les traitements sont décrits dans la politique de confidentialité. Les informations sportives peuvent comporter des erreurs et le service n’est pas garanti sans interruption. Aucune clause ne limite une responsabilité qui ne peut légalement être exclue. Le droit français s’applique sous réserve des règles impératives et protections dont l’utilisateur ne peut se départir; aucune juridiction exclusive n’est imposée ici.</p>
+      <aside style={{ padding: "12px", background: "#fff7db", border: "1px solid #e8d99b" }}><strong>À finaliser avant mise en ligne :</strong> statut juridique de l’éditeur, parcours mineurs, délai réel d’effacement et mécanisme d’acceptation des conditions.</aside>
+    </>
+  )
 }
 
 export default CGU
