@@ -19,24 +19,25 @@ function MatchDisplay({ matches }) {
     return (
         <div className="matches">
 
+            {matches.length === 0 && <p>No match to show right now</p>}
+
             {matches.map(match => (
+
                 <div className="match" key={`${match.type}-${match.id}`}>
 
                     <div className="match-header">
                         <span>{match.round}</span>
                     </div>
 
-                    {/* Affiché si le match est scheduled */}
+                    {/* Affiché si le match est en live */}
                     {match.type === 'live' && (
                         <div className="match-score">
                             <div className="match-details"><p className={match.server === 1 ? "match-server" : ""}>{match.player1}</p><p className='match-details-live'><span className='match-details-games'>{match.scorep1}</span><span className='match-details-points'>{match.pointp1}</span></p></div>
-                            <div className="match-details"><p className={match.server === 2 ? "match-server" : ""}>{match.player2}</p><p className='match-details-live'><span className='match-details-games'>{match.scorep2}</span><span className='match-details-points'>{match.pointp2}</span></p></div>                        
+                            <div className="match-details"><p className={match.server === 2 ? "match-server" : ""}>{match.player2}</p><p className='match-details-live'><span className='match-details-games'>{match.scorep2}</span><span className='match-details-points'>{match.pointp2}</span></p></div>
                         </div>
                     )}
 
-
-
-                    {/* Affiché si le match est terminé ou live */}
+                    {/* Affiché si le match est terminé*/}
                     {match.type === 'finished' && (
                         <div className="match-score">
                             <div className={match.winner === 1 ? "match-details match-details-winner" : "match-details match-details-loser"}><p>{match.player1}</p><span>{match.scorep1}</span></div>

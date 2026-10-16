@@ -31,7 +31,30 @@ export function AuthProvider({ children }) {
         })
 
         return () => controller.abort()
-    }, [])
+    }, []) //recup des infos au chargement
+
+    useEffect(() => {
+      const controller = new AbortController()
+
+      const timer = setTimeout(async () =>{
+        try {
+          const data = await apiService.refresh(controller.signal)
+          setAccessToken(data.token)
+          setUser(data.user)
+        } catch (err) {
+          console.log('refresh failed:', err.message)
+          if (err.name !== 'AbortError') setAccessToken(null)
+        } finally {
+          if (!controller.signal.aborted) setLoading(false)
+        }
+      }, 840000)//14minutes, token = 15minutes donc un peu de délai
+
+
+      return () => {
+        clearTimeout(timer)
+        controller.abort()
+      }
+    }, [accessToken]) //au bout de 14minutes, on refresh pour pas que ca plante
 
   if (loading) return <Loader />
 

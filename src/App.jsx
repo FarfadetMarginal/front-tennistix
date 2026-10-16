@@ -12,6 +12,7 @@ import Notifs from "./pages/Notifs";
 import NotFound from './pages/NotFound';
 import NavBar from "./components/Navbar";
 import Legals from "./pages/Legals";
+import Settings from "./pages/Settings";
 
 // Layout avec la NavBar permanente
 function MainLayout() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/modify" element={<Modify />} />
         <Route path="/notif" element={<Notifs />} />
         <Route path="/legals" element={<Legals />} />
+        <Route path="/settings" element={<Settings />} />
       </Route>
 
       <Route path="/login" element={<Login />} />

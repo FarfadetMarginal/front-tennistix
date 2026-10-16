@@ -14,7 +14,6 @@ function LbDisplay({ data, type }) {
                     <span className="lb-rank">{index + 1}</span>
                 </div>
             ))}
-            {data.length === 0 && <p>Aucun résultat</p>}
         </div>
     )
 }

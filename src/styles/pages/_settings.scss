@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as *;
+@use '../components/matchdisplay' ;
+
+.settingsmain{
+    text-align: center;
+    padding: 5px;
+    .lillogo{
+        width: 45px;
+        justify-self: center;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    .s1settings{
+        background-color: white;
+        border-radius: 10px;
+        margin: auto;
+        max-width: 650px;
+        padding: 20px 0;
+        margin: 10px 20px;
+        justify-self: center;
+        width: stretch;
+        a{
+            color: black;
+            font-family: $textfont;
+        }
+        .settings-legals1:hover{
+            color: $colord;
+        }
+        .settings-legals2:hover{
+            color: $colorh;
+        }
+        .settings-legals3:hover{
+            color: $colortb;
+        }
+
+    }
+}

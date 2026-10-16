@@ -34,6 +34,7 @@ const ProfileDisplay = () => {
                     <Link to="/favlist">Favorite list</Link>
                     <Link to="/modify">Modify profile</Link>
                     <button onClick={handleLogout}>Logout</button>
+                    <Link to="/settings">Settings</Link>
                 </div>
         </>
     )

@@ -7,6 +7,9 @@
     margin: auto;
     margin-top: 20px;
     .leaderboard{
+        >p{
+            font-family: $textfont;
+        }
         .lb-row{
             background-color: white;
             border-radius: 40px;

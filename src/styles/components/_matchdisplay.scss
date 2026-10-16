@@ -3,8 +3,13 @@
 
 
 .sectionmatches{
-    .match{
-        @include match;
+    .matches{
+        >p{
+            font-family: $textfont;
+        }
+        .match{
+            @include match;
+        }
     }
     @media (min-width: 1024px) {
         max-width: 650px;
