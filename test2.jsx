@@ -1,17 +1,19 @@
-import { useState } from "react"
+import '../styles/components/_card.scss'
 
-function Input() {
-    const [text, setText] = useState("")
+function Card() {
 
-    function HandleChange(e:React.ChangeEvent<HTMLInputElement>) {
-        setText(e.target.value)
-    }
+    useEffect(() => {
+        console.log("composant monté")
+        }, [])
+
     return (
         <>
-            <input value={text} onChange={HandleChange} type="text" />
-            <p>{text}</p>
+            <div>
+                <h2>titre</h2>
+                <p>texte</p>
+            </div>
         </>
     )
 }
 
-export default Input
+export default Card

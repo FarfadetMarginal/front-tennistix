@@ -2,7 +2,6 @@ import { useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import '../styles/pages/_legals.scss'
 import CGU from '../components/CGU'
-import RGPD from '../components/RGPD'
 import Conf from '../components/conf'
 import MentionsLegales from '../components/mentionslegales'
 
@@ -25,12 +24,9 @@ const Legals = () => {
                     <CGU />
                 </section>
                 <section id="s2legals" className="s2legals">
-                    <RGPD />
-                </section>
-                <section id="s3legals" className="s3legals">
                     <Conf />
                 </section>
-                <section id="s4legals" className="s4legals">
+                <section id="s3legals" className="s3legals">
                     <MentionsLegales />
                 </section>
             </main>

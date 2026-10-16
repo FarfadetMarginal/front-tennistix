@@ -12,10 +12,11 @@ function NavBar() {
 
             <NavLink  className={({ isActive }) =>`navbar-link ${isActive ? "active" : ""}`} to="/profile"><i className="hgi hgi-stroke hgi-rounded hgi-user-sharing"></i><p>Profile</p></NavLink>
 
-            <NavLink  className='navbar-legals' to="/legals#s1legals"><p>General Terms of Use</p></NavLink>
-            <NavLink  className='navbar-legals' to="/legals#s2legals"><p>GDPR Consent Form</p></NavLink>
-            <NavLink  className='navbar-legals' to="/legals#s3legals"><p>Privacy Policy</p></NavLink>
-            <NavLink  className='navbar-legals' to="/legals#s4legals"><p>Legal Notice</p></NavLink>
+            <div className='navbar-legals-div'>
+                <NavLink  className='navbar-legals' to="/legals#s1legals"><p>General Terms of Use</p></NavLink>
+                <NavLink  className='navbar-legals' to="/legals#s2legals"><p>Privacy Policy</p></NavLink>
+                <NavLink  className='navbar-legals' to="/legals#s3legals"><p>Legal Notice</p></NavLink>
+            </div>
         </div>
     )
 }

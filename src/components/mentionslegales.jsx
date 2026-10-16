@@ -1,22 +1,31 @@
 function MentionsLegales() {
   return (
     <>
-      <h2>Mentions légales</h2>
-      <p><strong>Version de travail — ne pas publier en l’état. Option d’anonymat de l’éditeur non professionnel à confirmer.</strong></p>
-      <h3>Éditeur</h3>
-      <p>Tennistix est édité par une personne physique agissant à titre non professionnel, sous réserve de confirmation de cette qualification. L’éditeur souhaite utiliser le régime d’anonymat prévu pour les éditeurs non professionnels. Cette option n’est valable que si l’activité est effectivement non professionnelle et si les éléments d’identification requis ont été communiqués à l’hébergeur.</p>
-      <h3>Hébergement</h3>
-      <p>Les éléments du projet indiquent Vercel pour le site web, Render pour l’API et Supabase pour la base de données. Les prestataires et entités d’hébergement exacts doivent être vérifiés auprès des contrats et tableaux de bord avant publication.</p>
+      <h2>Legal Notice</h2>
+      <p>Effective as of September 28, 2026</p>
+
+      <p>In accordance with French Law No. 2004-575 of June 21, 2004, on Confidence in the Digital Economy, users and visitors, hereinafter referred to as the “User”, are hereby informed of this legal notice for the Tennistix website, hereinafter referred to as the “Site”.</p>
+      <p>This legal notice is available on the Site under the “Legal Notice” section.</p>
+
+      <h3>Website Publisher</h3>
+      <p>The Site is published, and its publication is directed, by Mr. Baptiste COUTAS, residing at 341 chemin des chataingers. He can be reached by telephone at 0652617997 or by email at <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>. He is hereinafter referred to as the “Publisher”.</p>
+
+      <h3>Hosting Provider</h3>
+      <p>The Site is hosted by Vercel, whose registered office is located at 102 avenue des Champs-Élysées, 75008 Paris, France.</p>
+
+      <h3>Access to the Site</h3>
+      <p>The Site is normally accessible to the User at any time. However, the Publisher may suspend, restrict, or interrupt access to the Site at any time, particularly to carry out updates or changes to its content. The Publisher shall not be held liable for any consequences that such unavailability may have on the User’s activities.</p>
+
+      <h3>Data Collection</h3>
+      <p>The Site collects and processes the User’s personal data in accordance with privacy requirements, French Law No. 78-17 of January 6, 1978, on data processing, data files and individual liberties, and the applicable rules governing the processing of personal data, including Regulation (EU) 2016/679 of the European Parliament and of the Council of April 27, 2016 (collectively, the “Applicable Data Protection Regulations”).</p>
+      <p>Under the Applicable Data Protection Regulations, the User has the right to access, rectify, erase, and object to the processing of their personal data. The User may exercise these rights:</p>
       <ul>
-        <li>Hébergeur principal : <strong>[nom juridique et adresse à confirmer]</strong></li>
-        <li>Hébergement de l’API : <strong>[nom juridique et adresse à confirmer]</strong></li>
-        <li>Base de données Supabase : <strong>[entité contractante, adresse et région à confirmer]</strong></li>
+        <li>by email at <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a></li>
       </ul>
-      <h3>Directeur de publication</h3>
-      <p>L’identité du directeur de publication doit être communiquée à l’hébergeur et son traitement au titre de l’anonymat doit être confirmé avant mise en ligne.</p>
-      <h3>Données personnelles</h3>
-      <p>La collecte et l’utilisation des données sont décrites dans la politique de confidentialité, qui fournit le moyen de contacter le responsable du traitement.</p>
-      <aside style={{ padding: "12px", background: "#fff7db", border: "1px solid #e8d99b" }}><strong>À vérifier avant publication :</strong> confirmer le statut non professionnel, transmettre les éléments d’identification personnels requis à l’hébergeur, identifier les entités d’hébergement exactes et leurs adresses, et confirmer le directeur de publication. Une marque ou un fournisseur de base de données ne remplace pas les coordonnées de l’hébergeur.</aside>
+
+      <p>Any use, reproduction, distribution, commercialization, or modification of all or part of the Site without the Publisher’s express authorization is prohibited and may result in legal action and proceedings as provided for under the applicable regulations.</p>
+      <p>For more information, please refer to the Terms and Conditions of the Tennistix Site, available under the “Terms and Uses section.</p>
+      <p>Prepared using <a href="http://legalplace.fr" target="_blank" rel="noreferrer">LegalPlace</a>.</p>
     </>
   )
 }

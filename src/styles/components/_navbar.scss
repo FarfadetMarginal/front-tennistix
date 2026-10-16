@@ -80,7 +80,7 @@
             }
         }
     }
-    .navbar-legals{
+    .navbar-legals-div{
         display: none;
     }
 
@@ -98,14 +98,20 @@
         gap: 20px;
         transform: translateX(0px);
         padding-top: 20px;
-        .navbar-legals{
+        .navbar-legals-div{
             display: flex;
-            font-family: $textfont;
-            color: black;
             font-size: 12px;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 50px;
             p{
                 margin-top: 0px;
                 margin-bottom: 0px;
+                color: black;
+                font-family: $textfont;
+                font-size: 12px;
             }
         }
     }
