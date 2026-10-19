@@ -1,4 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+@font-face {
+  font-family: "TikTok Sans";
+  src: url("/fonts/tiktok-sans-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bangers";
+  src: url("/fonts/bangers-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+}
 
 $bg: #F0F0F0;
 $colortb: #D95525;
