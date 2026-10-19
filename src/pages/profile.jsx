@@ -6,7 +6,7 @@ const Profile = () => {
     return (
         <>
             <main className="profilemain">
-            <Link to="/"><img className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
+            <Link to="/"><img width='341px' height='498px' className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
                 <section className="s1profile">
                     <ProfileDisplay />
                 </section>

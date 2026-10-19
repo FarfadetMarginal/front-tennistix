@@ -136,7 +136,7 @@ const Home = () => {
   return (
     <>
     <main className="homemain">
-        <Link to="/"><img className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
+        <Link to="/"><img width='341px' height='498px' className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
 
         <Filters
             tour={tour}
