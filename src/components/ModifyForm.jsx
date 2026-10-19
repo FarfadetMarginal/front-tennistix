@@ -3,6 +3,10 @@ import apiService from '../services/apiService';
 import { useAuth } from "../contexts/AuthContext"
 import { useNavigate } from "react-router-dom"
 import Loader from "./Loader";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  AiEditingIcon
+} from "@hugeicons/core-free-icons";
 
 
 const Avatars = ['blaireau.webp', 'bouledogue.webp', 'bull.webp', 'chien.webp', 'coq.webp', 'croco.webp', 'fox.webp', 'goat.webp', 'gorille.webp', 'koala.webp', 'lapin.webp', 'leopard.webp', 'lion.webp', 'loup.webp', 'lynx.webp', 'ours.webp', 'owl.webp', 'panthere.webp', 'rhino.webp', 'tigre.webp']
@@ -61,7 +65,7 @@ function ModifyForm() {
     
   return (
     <>
-        <button className="avatar-edit-button" onClick={() => setAvatarModal(true)} aria-label="Changer de photo de profil"><i className="hgi hgi-stroke hgi-rounded hgi-ai-editing"></i></button>
+        <button className="avatar-edit-button" onClick={() => setAvatarModal(true)} aria-label="Changer de photo de profil"><HugeiconsIcon icon={AiEditingIcon} size={16} aria-hidden="true" /></button>
         <img src={urlimg} alt="photo de profil" />
         <form className="modifyform" onSubmit={handleSubmit}>
             <input className="inputpseudo" type="text" name="pseudo" placeholder={user?.pseudo} onChange={(e) => setPseudo(e.target.value)} />
