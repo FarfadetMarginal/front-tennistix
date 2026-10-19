@@ -35,7 +35,7 @@ const Search = () => {
     return (
         <>
         <main className="searchmain">
-            <Link to="/"><img className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
+            <Link to="/"><img width='45px' height='66px' className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
             <section className="s1search">
 
             <div className="checkbox-wrapper-35">

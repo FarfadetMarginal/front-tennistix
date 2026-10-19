@@ -19,7 +19,7 @@ const Legals = () => {
     return (
         <>
             <main className="legalsmain">
-                <Link to="/"><img width='341px' height='498px' className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
+                <Link to="/"><img width='45px' height='66px' className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
                 <section id="s1legals" className="s1legals">
                     <CGU />
                 </section>
