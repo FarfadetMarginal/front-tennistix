@@ -44,7 +44,7 @@ const Leaderboard = () => {
         <>
         <main className="lbmain">
 
-            <Link to="/"><img width={45} height={66} className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
+            <Link to="/"><img width={56} height={82}  className="lillogo" src="logotx.webp" alt="logo tennistix" /></Link>
             <LbFilters type={type} setType={setType} scope={scope} setScope={setScope} />
             <section className="s1lb">
                 <LbDisplay data={data} type={type} />
