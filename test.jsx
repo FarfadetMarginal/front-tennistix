@@ -1,32 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Test = (isLoggedIn) => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [compteur, setCompteur] = useState(0)
 
-    async function handleSubmit(e) {
-        e.preventDefault()
-            try {
-                await apiService.login(email, password, controller.signal)
-                setIsLoggedIn(true)
-            
-            } catch (err) {
-                return err
-            }
+    function handleClick() {
+        setCompteur(compteur + 1)
+    }
 
-        }
+    useEffect(() => {
+       document.title = "Compteur: " + compteur
+    }, [compteur])
+
     return (
         <>
-        {isLoggedIn === true ? ( 
-            <p>Connecté</p>
-        ) : (
-            <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="mail" />
-                <input type="text" placeholder="password"/>
-                <button type="submit">Login</button>
-            </form>
-
-        )}
-        
+        <h1>{compteur}</h1>
+        <button onClick={handleClick}>+1</button>
         </>
     )
 }
