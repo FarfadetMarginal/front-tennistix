@@ -2,6 +2,7 @@ import { useState } from "react"
 import apiService from '../services/apiService';
 import { Link } from "react-router-dom"
 import Loader from "./Loader";
+import { useNavigate } from "react-router-dom"
 
 function RegisterForm() {
     const [pseudo, setPseudo] = useState(null)
@@ -9,6 +10,7 @@ function RegisterForm() {
     const [password, setPassword] = useState(null)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
+    const navigate = useNavigate()
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -17,6 +19,7 @@ function RegisterForm() {
         try {
             setLoading(true)
             await apiService.register(pseudo, email, password, controller.signal)
+            navigate('/login')
         } catch (err) {
             if(err.name !== 'AbortError') {
             console.error('Loading error: ', err)
