@@ -18,9 +18,7 @@ import Settings from "./pages/Settings";
 function MainLayout() {
   return (
     <>
-      <main>
-        <Outlet /> 
-      </main>
+      <Outlet /> 
       <NavBar /> 
     </>
   );
