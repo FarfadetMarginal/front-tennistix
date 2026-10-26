@@ -38,7 +38,7 @@ function ForgotPassForm() {
         <form className="authform" onSubmit={handleSubmit}>
             <h1>Enter your mail, submit and check your inbox ! </h1>
             <label htmlFor="mail">Mail</label>
-            <input type="email" name="mail" placeholder="Enter your mail adress" onChange={(e) => setEmail(e.target.value)} />
+            <input type="email" name="mail" id="mail" placeholder="Enter your mail adress" onChange={(e) => setEmail(e.target.value)} />
 
             <button type="submit">Reset password</button>
             <p>{error}</p>

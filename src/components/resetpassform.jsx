@@ -41,10 +41,10 @@ function ResetPassForm() {
             <h1>Confirm your mail and enter your new password</h1>
 
             <label htmlFor="mail">Mail</label>
-            <input type="email" name="mail" placeholder="Enter your mail adress" onChange={(e) => setEmail(e.target.value)} />
+            <input type="email" name="mail" id="mail" placeholder="Enter your mail adress" onChange={(e) => setEmail(e.target.value)} />
 
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" placeholder="Enter your password" onChange={(e) => setNewPassword(e.target.value)} />
+            <input type="password" name="password" id="password" placeholder="Enter your password" onChange={(e) => setNewPassword(e.target.value)} />
 
             <button type="submit">Reset password</button>
         </form>

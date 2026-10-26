@@ -47,10 +47,10 @@ function LoginForm() {
             <h1>Welcome back !</h1>
             
             <label htmlFor="mail">Mail</label>
-            <input type="email" name="mail" placeholder="Enter your mail adress" onChange={(e) => setEmail(e.target.value)} />
+            <input type="email" name="mail" id="mail" placeholder="Enter your mail adress" onChange={(e) => setEmail(e.target.value)} />
 
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)} />
+            <input type="password" name="password" id="password" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)} />
             <Link to="/forgotpass">Forgot password</Link>
 
             <button type="submit">Login</button>
