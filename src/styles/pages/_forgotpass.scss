@@ -2,10 +2,7 @@
 @use '../components/authform' ;
 
 .forgotpassmain{
-    background-image: url(bgloginpng.png);
     background-color: $bg;
-    background-blend-mode: color-burn;
-    background-size: contain;
     text-align: center;
     form{
         height: 450px;

@@ -2,10 +2,7 @@
 @use '../components/authform' ;
 
 .registermain{
-    background-image: url(bgloginpng.png);
     background-color: $bg;
-    background-blend-mode: color-burn;
-    background-size: contain;
     text-align: center;
     .biglogo{
         width: 80px;
