@@ -1,7 +1,11 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-.d1notifs{
+.s1notifs{
+    >p{
+        font-family: $textfont;
+    }
+    .d1notifs{
         background-color: white;
         border-radius: 30px;
         height: 60px;
@@ -39,3 +43,4 @@
             background-color: $colortb;
         }
     }
+}

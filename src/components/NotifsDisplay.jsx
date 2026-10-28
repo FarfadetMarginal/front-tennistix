@@ -14,7 +14,7 @@ const NotifsDisplay = ({users}) => {
     useEffect(() => {
         if (authLoading) return
         if (!accessToken) { navigate('/login'); return }
-    }, [accessToken, authLoading]) // se relance quand les filtres changent
+    }, [accessToken, authLoading])
 
     const [error, setError] = useState(null)
     const [localUsers, setUsers] = useState(users)
@@ -45,7 +45,9 @@ const NotifsDisplay = ({users}) => {
     }
     return (
         <>
-            {localUsers.map(user => (
+            {localUsers.length === 0 ? ( 
+                <p>No friend request</p>
+            ) : (localUsers.map(user => (
             <div className="d1notifs" key={user.sender_id}>
                 <div className="infodivnotifs">
                     <img src={`/avatars/${user?.pp}`}alt="profile picture" />
@@ -56,7 +58,7 @@ const NotifsDisplay = ({users}) => {
                     <button className="declinebutton" onClick={() => handleDecline(user.sender_id)}>Decline</button>
                 </div>
             </div>
-            ))}
+            )))}
             <p>{error}</p>
         </>
     )
