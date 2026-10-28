@@ -1,4 +1,4 @@
-import ForgotPassForm from "../components/forgotpassform"
+import ForgotPassForm from "../components/ForgotPassForm"
 import '../styles/pages/_forgotpass.scss'
 
 const ForgotPass = () => {

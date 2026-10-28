@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import Filters from "../components/filterbar"
-import MatchDisplay from "../components/matchdisplay"
+import Filters from "../components/FilterBar"
+import MatchDisplay from "../components/MatchDisplay"
 import apiService from '../services/apiService';
 import '../styles/pages/_home.scss'
 import { useAuth } from "../contexts/AuthContext";

@@ -2,8 +2,8 @@ import { useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import '../styles/pages/_legals.scss'
 import CGU from '../components/CGU'
-import Conf from '../components/conf'
-import MentionsLegales from '../components/mentionslegales'
+import Conf from '../components/Conf'
+import MentionsLegales from '../components/MentionsLegales'
 
 const Legals = () => {
 

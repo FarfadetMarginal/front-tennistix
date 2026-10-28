@@ -3,7 +3,7 @@ import { useAuth } from "../contexts/AuthContext"
 import { useNavigate, Link } from "react-router-dom"
 import apiService from '../services/apiService'
 import LbDisplay from "../components/LbDisplay"
-import LbFilters from "../components/filterbarlb"
+import LbFilters from "../components/FilterBarLb"
 import '../styles/pages/_lb.scss'
 import Loader from "../components/Loader"
 

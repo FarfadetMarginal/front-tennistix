@@ -1,4 +1,4 @@
-import ResetPassForm from "../components/resetpassform"
+import ResetPassForm from "../components/ResetPassForm"
 import '../styles/pages/_resetpass.scss'
 
 const ResetPass = () => {
