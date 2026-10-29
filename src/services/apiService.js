@@ -324,7 +324,7 @@ const apiService = {
         return await req.json()
     },
 
-     async updateUser(accessToken, pseudo, email, password, pp, signal){
+    async updateUser(accessToken, pseudo, email, password, pp, signal){
         const req = await fetch(`${BASE_URL}/user/update`, {
             method : 'PATCH',
             headers : {
@@ -349,6 +349,24 @@ const apiService = {
             credentials: 'include',
             signal
         })
+    },
+    
+    async deleteUser(accessToken, signal){
+        const req = await fetch(`${BASE_URL}/user/delete`, {
+            method : 'DELETE',
+            headers : {
+                'Content-Type' : 'application/json',
+                Authorization: `Bearer ${accessToken}`
+            },
+            credentials: 'include',
+            signal
+        })
+
+        if(!req.ok){
+            const data = await req.json()
+            throw new Error(data.message)
+        }
+        return await req.json()
     }
 }
 

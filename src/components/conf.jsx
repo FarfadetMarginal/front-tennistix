@@ -2,35 +2,54 @@ function Conf() {
   return (
     <>
       <h2>Privacy Policy</h2>
-      <p>Last updated October 27, 2026</p>
-      <p>This policy describes how Tennistix processes personal data when you use the website at <a href="https://tennistix.vercel.app">tennistix.vercel.app</a>. Tennistix is operated by an individual publisher based in France. For privacy requests, email <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>. The publisher’s identity and contact details must be made available as required by privacy law; the public anonymity option for a French non-professional publisher does not by itself resolve that requirement.</p>
+      <p>Last updated October 29, 2026</p>
+      <p>This policy describes how Tennistix processes personal data when you use <a href="https://tennistix.vercel.app">tennistix.vercel.app</a>. The data controller is Baptiste Coutas, an individual based in Brignoles, France. For privacy requests, contact <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>. No Data Protection Officer (DPO) has been formally appointed; this email is the privacy contact.</p>
+
       <h3>1. Data we process</h3>
-      <p>Depending on how you use Tennistix, we process your email address, username, avatar, account authentication data, favourite players, tennis predictions and related history, friend connections, and information needed to display rankings and operate your account. Username, avatar, predictions and favourites may be shown to other users where needed for the feature you use. The website uses an essential authentication cookie called tokenRefresh. Hosting or security providers may create technical access logs; the exact fields must be checked with those providers.</p>
-      <p>Please do not submit sensitive personal data in your profile or interactions. Tennistix is not designed to request special-category data.</p>
-      <h3>2. Why we use data</h3>
+      <p>Depending on how you use Tennistix, we process your email address, username, avatar, account and authentication information, favourite players, tennis predictions and related history, friend connections, and information needed to display rankings and operate your account. Username, avatar, predictions and favourites may be shown to other users where needed for the feature you use. The website also uses an authentication cookie called tokenRefresh.</p>
+      <p>Google Analytics may process online identifiers, device and browser information, approximate location, traffic source, page and interaction information, and events described below. Hosting and security providers may process technical logs. Please do not submit sensitive personal data in your profile or interactions; Tennistix is not designed to request special-category data.</p>
+
+      <h3>2. Why we use data and our legal bases</h3>
       <ul>
-        <li>To create and manage accounts and provide predictions, favourites, friend and ranking features.</li>
-        <li>To send password-reset messages and restore account access.</li>
-        <li>To protect accounts and the website and prevent misuse.</li>
-        <li>To meet legal obligations.</li>
+        <li>To create and manage accounts and provide predictions, favourites, friend and ranking features. Legal basis: providing the service requested by the user.</li>
+        <li>To send password-reset messages and restore account access. Legal basis: providing and supporting the account service.</li>
+        <li>To protect accounts and the website and prevent misuse. Legal basis: our legitimate interest in keeping the service secure, where permitted by law.</li>
+        <li>To comply with legal obligations where they apply. Legal basis: compliance with a legal obligation.</li>
+        <li>To measure website audience using Google Analytics. Legal basis: your consent, requested through the cookie banner. Analytics is not loaded before you accept.</li>
       </ul>
-      <p>For users in the EEA, the relevant legal basis depends on the purpose: providing requested account features, legitimate interests in service security where permitted, legal obligations, or consent for optional processing where consent is requested. Consent may be withdrawn at any time for future processing.</p>
-      <h3>3. Service providers and international transfers</h3>
-      <p>Based on the project configuration reviewed, Vercel provides website hosting, Supabase provides database services, and Brevo is used to send password-reset emails. These providers process data to provide their services. Their exact contracting entities, data locations, retention terms and transfer safeguards must be confirmed in the accounts and agreements used for Tennistix. Data may be processed in countries where these providers or their subprocessors operate; any transfer must use a mechanism permitted by applicable law.</p>
-      <h3>4. Retention</h3>
-      <p>Account data will be kept while the account is active. If there is no activity for two years, we will send a warning before deleting or anonymising the account data unless the user signs in or otherwise asks to keep the account. This two-year inactivity period follows a CNIL proportionality recommendation for online accounts; it is not a universal retention period required by every country’s law.</p>
-      <p>If you request account deletion, email <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>. We will handle the request within one month where the GDPR applies, and within the time required by other applicable laws. Data in backups will be removed through the backup rotation, no later than 90 days after deletion from active systems. Data that must be retained by law or to establish, exercise or defend legal claims will be restricted and kept only for the relevant legal period.</p>
-      <p>Security logs, if collected by Tennistix, will be kept for six months by default and no longer than one year unless a specific legal or security need justifies a different period. Provider log retention must be confirmed against the hosting and database settings.</p>
-      <h3>5. Your rights</h3>
-      <p>Depending on your location and applicable law, you may have the right to request access to, correction of, deletion of, or restriction of processing of your personal data; object to certain processing; receive a portable copy; and withdraw consent where processing relies on consent. You may complain to the competent data protection authority in your country. In France, this is the CNIL. In the EEA, you may contact the authority where you live, work, or where an alleged infringement took place.</p>
-      <h3>6. Children and parental involvement</h3>
-      <p>Tennistix is available to users of all ages where local law permits. If you are under the age of majority where you live, a parent or legal guardian must review the service terms and approve your use. Where law requires verifiable parental consent before collecting a child’s personal data, Tennistix must obtain that consent before account creation. In France, where consent is the legal basis for optional online data processing, a child under 15 and a parent or guardian must give joint consent. A parent or guardian may contact <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a> to request access to or deletion of a child’s account. The technical age and parent-consent process must be implemented and verified before minors are admitted.</p>
-      <h3>7. Security and changes</h3>
+
+      <h3>3. Service providers and transfers</h3>
+      <p>Vercel provides website hosting, Supabase provides database services, Brevo is used to send service emails such as password-reset messages, and Google provides Google Analytics. The Tennistix Supabase database is configured in the Europe West (Ireland) region, based on the project settings reviewed. Providers may use subprocessors and may process some data in countries outside the European Economic Area. The applicable transfer safeguards depend on the current provider terms and account plans; these must be checked against the accounts used for Tennistix.</p>
+
+      <h3>4. Google Analytics and Search Console</h3>
+      <p>The Google Analytics 4 web stream for Tennistix has the measurement ID G-LG955QDWDZ. Enhanced measurement is enabled and currently records page views, scrolls, outbound clicks, site searches, video engagement, file downloads and form interactions. Email redaction is enabled in the stream settings. URL query-parameter redaction is currently disabled; authentication tokens and other personal data must not be included in URLs sent to Analytics, and the relevant parameter redaction should be configured.</p>
+      <p>In the settings reviewed on October 29, 2026, event data retention is set to 2 months and user-level data retention to 14 months, with the retention period reset when the user is active. Google Search Console is used separately to review search performance. The Analytics administration page currently recommends linking the verified Search Console property; that link did not appear to be configured.</p>
+
+      <h3>5. Cookies and choices</h3>
+      <p>The tokenRefresh cookie is used for authentication and is necessary to provide account sessions. Google Analytics uses analytics cookies only after you accept the cookie banner. If you reject, the Google Analytics script is not loaded.</p>
+      <p>Your choice is stored in your browser’s local storage. To withdraw consent after accepting, contact <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>. We will stop Google Analytics for future use and provide instructions for removing existing Analytics cookies.</p>
+
+      <h3>6. Retention</h3>
+      <p>Account data is kept while the account is active. After 2 years without an action from you, we plan to send a warning. If you do not sign in or ask us to keep the account within 1 month after that warning, we will delete or anonymise the account data, except for information that must be retained separately to meet a legal obligation or establish, exercise or defend legal claims. The 2-year period is a retention choice based on CNIL guidance for inactive online accounts; it is not a universal period required by every country’s law.</p>
+      <p>You can start an account-deletion request from your account settings. Deletion from active systems will be carried out as part of that process. Where the GDPR applies, we will respond to a rights request within 1 month; this period may be extended by 2 months for a complex request or a large number of requests, and we will notify you within the first month if an extension is needed.</p>
+      <p>Supabase’s Free plan does not provide downloadable automatic database backups. Any manual backups made by the operator must be retained only for a defined period and deleted according to that schedule. Technical and security-log retention depends on the settings and retention policies of the relevant providers and must be reviewed periodically.</p>
+
+      <h3>7. Your rights</h3>
+      <p>Depending on your location and applicable law, you may have the right to request access to, correction of, deletion of or restriction of processing of your personal data; object to certain processing; receive a portable copy where that right applies; and withdraw consent for future processing where consent is the legal basis. You may complain to the competent data-protection authority. In France, this is the CNIL. In the EEA, you may contact the authority where you live, work or where an alleged infringement took place.</p>
+      <p>To exercise your rights, email <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>. We may ask for information needed to verify your identity where there is a reasonable doubt, but will not request excessive identification documents.</p>
+
+      <h3>8. Children</h3>
+      <p>A dedicated age-check and parental-consent process has not yet been implemented. The rules for minors are still to be determined and may vary by country. This section must be completed before Tennistix is presented as available to minors in the European Economic Area. Parents or guardians may contact <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a> about a child’s account or personal data.</p>
+
+      <h3>9. Security and changes</h3>
       <p>We take steps intended to protect account information, but no online service can guarantee absolute security. We may update this policy when Tennistix, its service providers or applicable requirements change. The updated date will appear at the top of the policy.</p>
-      <h3>8. Contact</h3>
-      <p>For questions or to make a privacy request, email <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>.</p>
+
+      <h3>10. Contact</h3>
+      <p>For privacy questions or requests, contact Baptiste Coutas at <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>.</p>
     </>
   )
 }
 
 export default Conf
+
+
