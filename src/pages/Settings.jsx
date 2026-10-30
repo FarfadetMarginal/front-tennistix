@@ -12,6 +12,11 @@ const Settings = () => {
         if (!accessToken) navigate('/login')
     }, [accessToken, navigate])
 
+    const handleResetAnalytics = () => {
+        localStorage.removeItem("analyticsConsent")
+        window.location.reload()
+    }
+
     const handleDeleteAccount = async () => {
         const confirmed = window.confirm(
             "Are you sure you want to permanently delete your account? Your profile, predictions and friend connections will be deleted. This action cannot be undone."
@@ -36,6 +41,9 @@ const Settings = () => {
                     <NavLink className='settings-legals1' to="/legals#s1legals"><p>General Terms of Use</p></NavLink>
                     <NavLink className='settings-legals2' to="/legals#s2legals"><p>Privacy Policy</p></NavLink>
                     <NavLink className='settings-legals3' to="/legals#s3legals"><p>Legal Notice</p></NavLink>
+                    <button type="button" onClick={handleResetAnalytics}>
+                        Change analytics consent
+                    </button>
                     <button type="button" onClick={handleDeleteAccount}>
                         Delete account
                     </button>

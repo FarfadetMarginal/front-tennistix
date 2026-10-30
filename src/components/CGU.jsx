@@ -2,13 +2,13 @@ function CGU() {
   return (
     <>
       <h2>Terms of Use</h2>
-      <p>Last updated October 29, 2026</p>
+      <p>Last updated October 30, 2026</p>
 
       <h3>1. About Tennistix</h3>
       <p>Tennistix is a free tennis website operated by Baptiste Coutas as an individual. It provides user accounts, tennis predictions, favourite players, friend connections and rankings. For questions, contact <a href="mailto:bapt935@gmail.com">bapt935@gmail.com</a>.</p>
 
       <h3>2. Eligibility and minors</h3>
-      <p>You may use Tennistix only where doing so is permitted by the laws that apply to you. Tennistix has not yet implemented a dedicated age-check or parental-consent process. Where local law requires a parent or legal guardian to approve a minor’s account or personal-data processing, that approval must be obtained before the relevant use. Tennistix may restrict access where required by law. These terms do not replace rules on a minor’s legal capacity in their country.</p>
+      <p>Tennistix is intended for users of all ages where use is permitted by the laws that apply to them. The age at which a child may consent independently varies by country. Where local law requires a parent or legal guardian to approve a minor’s account or personal-data processing, that approval must be obtained before the relevant use. Tennistix may restrict access where required by law. These terms do not replace rules on a minor’s legal capacity in their country.</p>
 
       <h3>3. Availability</h3>
       <p>Tennistix is operated from France and may be accessible from other countries. Access is offered only where the service is lawful. Mandatory local laws and user protections continue to apply. These terms do not claim that Tennistix has been adapted to every country’s specific requirements.</p>
