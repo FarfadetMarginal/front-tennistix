@@ -46,6 +46,3 @@ function CookieBar() {
 }
 
 export default CookieBar;
-  
-  
-  

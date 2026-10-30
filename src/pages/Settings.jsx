@@ -9,7 +9,7 @@ const Settings = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (!accessToken) navigate('/login', { replace: true })
+        if (!accessToken) navigate('/login')
     }, [accessToken, navigate])
 
     const handleDeleteAccount = async () => {
