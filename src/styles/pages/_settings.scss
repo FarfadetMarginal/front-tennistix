@@ -20,6 +20,7 @@
         margin: 10px 20px;
         justify-self: center;
         width: stretch;
+        display: grid;
         a{
             color: black;
             font-family: $textfont;
@@ -33,6 +34,12 @@
         .settings-legals3:hover{
             color: $colortb;
         }
-
+        button{
+            color: black;
+            font-family: $textfont;
+            background-color: white;
+            border-style: none;
+            padding-bottom: 10px;
+        }
     }
 }
