@@ -13,6 +13,12 @@ const SearchDisplay = ({ results, mode, query, players }) => {
             console.log('Demande envoyée')
             setSentRequests(prev => [...prev, userId])
         } catch (err) {
+            if (err.status === 409) {
+                setSentRequests(prev =>
+                    prev.includes(userId) ? prev : [...prev, userId]
+                )
+                return
+            }
             console.error(err.message)
             setError(err.message)
         }

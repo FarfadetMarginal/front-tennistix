@@ -183,7 +183,9 @@ const apiService = {
 
         if(!req.ok){
             const data = await req.json()
-            throw new Error(data.message)
+            const error = new Error(data.message || data.detail || data.title || "Request failed")
+            error.status = req.status
+            throw error
         }
         return await req.json()
     },
