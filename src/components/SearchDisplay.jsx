@@ -31,6 +31,7 @@ const SearchDisplay = ({ results, mode, query, players }) => {
     return (
         <div className='divsearch'>
             {displayed.map(item => (
+                <>
                 <div key={item.id}>
                     {mode === 'users' && (
                         <img src={`/avatars/${item?.pp}`} alt="profile picture" />
@@ -39,8 +40,9 @@ const SearchDisplay = ({ results, mode, query, players }) => {
                     {mode === 'users' && (
                         <button onClick={() => handleSendRequest(item.id)} disabled={sentRequests.includes(item.id)}>{sentRequests.includes(item.id) ? "Request sent" : "Add friend"}</button>
                     )}
-                    <p>{error}</p>
                 </div>
+                <p>{error}</p>
+                </>
             ))}
         </div>
     )
