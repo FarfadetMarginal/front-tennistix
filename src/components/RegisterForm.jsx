@@ -39,7 +39,7 @@ function RegisterForm() {
   return (
     <>
         <form className="authform" onSubmit={handleSubmit}>
-            <h1>Welcome back !</h1>
+            <h1>Welcome!</h1>
             
             <label htmlFor="pseudo">Username</label>
             <input type="text" name="pseudo" id="pseudo" placeholder="Enter your username" onChange={(e) => setPseudo(e.target.value)} />
