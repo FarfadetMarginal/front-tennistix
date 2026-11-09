@@ -15,7 +15,7 @@ const apiService = {
 
         if(!req.ok){
             const data = await req.json()
-            throw new Error(data.message)
+            throw new Error(data.message || data.detail || data.title || data.status || "Request failed")
         }
         return await req.json()
     },
@@ -33,7 +33,7 @@ const apiService = {
 
         if(!req.ok){
             const data = await req.json()
-            throw new Error(data.message)
+            throw new Error(data.message || data.detail || data.title || data.status || "Request failed")
         }
         return await req.json()
     },
