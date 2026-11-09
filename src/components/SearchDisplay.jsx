@@ -1,15 +1,20 @@
 import apiService from '../services/apiService'
 import { useAuth } from "../contexts/AuthContext"
+import { useState } from "react"
 
 const SearchDisplay = ({ results, mode, query, players }) => {
     const { accessToken } = useAuth()
-    
+    const [error, setError] = useState(null)
+    const [sentRequests, setSentRequests] = useState([])
+
     const handleSendRequest = async (userId) => {
         try {
             await apiService.sendRequest(accessToken, userId)
             console.log('Demande envoyée')
+            setSentRequests(prev => [...prev, userId])
         } catch (err) {
             console.error(err.message)
+            setError(err.message)
         }
     }
     
@@ -26,8 +31,9 @@ const SearchDisplay = ({ results, mode, query, players }) => {
                     )}
                     <p>{mode === 'players' ? item.name : item.pseudo}</p>
                     {mode === 'users' && (
-                        <button onClick={() => handleSendRequest(item.id)}>Add friend</button>
+                        <button onClick={() => handleSendRequest(item.id)} disabled={sentRequests.includes(item.id)}>{sentRequests.includes(item.id) ? "Request sent" : "Add friend"}</button>
                     )}
+                    <p>{error}</p>
                 </div>
             ))}
         </div>
