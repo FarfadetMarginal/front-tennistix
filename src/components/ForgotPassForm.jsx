@@ -1,6 +1,6 @@
 import { useState } from "react"
 import apiService from '../services/apiService';
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"
 import Loader from "./Loader";
 
 
@@ -8,7 +8,6 @@ function ForgotPassForm() {
     const [email, setEmail] = useState(null)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
-    const navigate = useNavigate()
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -17,7 +16,7 @@ function ForgotPassForm() {
             setLoading(true)
             setError(null)
             await apiService.forgotpass(email, controller.signal)
-            navigate('/login')
+            setError("Mail sent")
         } catch (err) {
             if(err.name !== 'AbortError') {
             console.error('Loading error: ', err)
@@ -41,7 +40,8 @@ function ForgotPassForm() {
             <input type="email" name="mail" id="mail" placeholder="Enter your mail adress" onChange={(e) => setEmail(e.target.value)} />
 
             <button type="submit">Reset password</button>
-            <p>{error}</p>
+            <p className="forgotmessage">{error}</p>
+            {error === "Mail sent" && <Link to="/login">Back to login</Link>}
         </form>
     </>
   )

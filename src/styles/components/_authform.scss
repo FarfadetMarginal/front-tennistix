@@ -48,6 +48,14 @@
     font-family: $textfont;
     display: flex;
     flex-direction: column;
+    >p{
+        font-size: 12px;
+    }
+    .forgotmessage{
+        font-size: 18px;
+        color: $colorh;
+        font-weight: 500;
+    }
     label{
         font-size: 20px;
         padding-bottom: 10px;

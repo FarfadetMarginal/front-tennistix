@@ -12,9 +12,25 @@ function LoginForm() {
     const navigate = useNavigate()
     const [error, setError] = useState(null)
     const { setAccessToken, setUser } = useAuth()
+    const [mailError, setMailError] = useState(null)
     
     async function handleSubmit(e) {
         e.preventDefault()
+        setError(null)
+
+        const userEmail = email?.trim() || ''
+        const userPassword = password || ''
+
+        if (userEmail.length < 5) {
+            setMailError('Enter a valid email address.')
+            return
+        }
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{6,}$/;
+        const isValidPsw = passwordRegex.test(userPassword);
+        if (isValidPsw === false) {
+            setError('Must contain at least 6 characters, 1 uppercase letter, 1 lowercase letter and 1 special character')
+            return
+        }
         const controller = new AbortController()
         
         try {
@@ -48,9 +64,11 @@ function LoginForm() {
             
             <label htmlFor="mail">Mail</label>
             <input type="email" name="mail" id="mail" placeholder="Enter your mail adress" onChange={(e) => setEmail(e.target.value)} />
+            <p>{mailError}</p>
 
             <label htmlFor="password">Password</label>
             <input type="password" name="password" id="password" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)} />
+            <p>{error}</p>
             <Link to="/forgotpass">Forgot password</Link>
 
             <button type="submit">Login</button>
@@ -58,7 +76,6 @@ function LoginForm() {
                 <p>Don't have an account ? </p>
                 <Link to="/register">Register</Link>
             </div>
-            <p>{error}</p>
         </form>
     </>
   )
