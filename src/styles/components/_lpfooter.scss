@@ -3,7 +3,6 @@
 .lpfooter{
     flex: 1;
     min-height: 315px;
-
     .lplandscape{
         position: absolute;
         z-index: -1;
@@ -11,7 +10,7 @@
         bottom: 0;
         left: 0;
         pointer-events: none;
-        mask-image: linear-gradient(to bottom, transparent, black 12%);
+        mask-image: linear-gradient(to bottom, transparent, black 25%);
 
         img{
             display: block;
@@ -23,13 +22,16 @@
     .lplegals{
         position: absolute;
         bottom: 15px;
-        left: 15px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 1980px;
+        margin: auto;
+        padding: 15px;
         display: flex;
         flex-direction: column;
         gap: 15px;
         font-size: 20px;
-        line-height: 24px;
-
         a{
             width: fit-content;
             color: white;
@@ -59,7 +61,7 @@
 
         .lplegals{
             bottom: 100px;
-            left: 10px;
+            padding-inline: 10px;
             gap: 10px;
             font-size: 16px;
 
