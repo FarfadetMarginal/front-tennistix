@@ -21,16 +21,16 @@
 
     .lplegals{
         position: absolute;
-        bottom: 15px;
+        bottom: 0;
         left: 0;
         right: 0;
         width: 100%;
         max-width: 1980px;
         margin: auto;
-        padding: 15px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
         font-size: 20px;
         a{
             width: fit-content;
