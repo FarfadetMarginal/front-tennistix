@@ -38,6 +38,8 @@
         gap: 50px;
         width: 100%;
         max-width: none;
+        margin-inline: 0;
+        justify-self: stretch;
 
         .lpfeature{
             box-sizing: border-box;
