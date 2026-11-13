@@ -5,7 +5,7 @@
     isolation: isolate;
     display: flex;
     flex-direction: column;
-    min-height: max(100svh);
+    min-height: 100svh;
     overflow: clip;
     background-color: $bg;
     color: black;
