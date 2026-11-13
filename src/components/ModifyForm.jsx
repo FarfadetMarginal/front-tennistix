@@ -28,7 +28,7 @@ function ModifyForm() {
 
     useEffect(() => {
             if (authLoading) return
-            if (!accessToken) { navigate('/login'); return }
+            if (!accessToken) { navigate('/landingpage'); return }
             console.log(user)
         }, [accessToken, authLoading]) // se relance quand les filtres changent
     

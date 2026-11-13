@@ -27,7 +27,7 @@ const Settings = () => {
         try {
             await apiService.deleteUser(accessToken)
             logout()
-            navigate('/login')
+            navigate('/landingpage')
         } catch (err) {
             console.error('error: ', err)
         }

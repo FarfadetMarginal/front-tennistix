@@ -20,7 +20,7 @@ const ProfileDisplay = () => {
 
     useEffect(() => {
         if (authLoading) return
-        if (!accessToken) { navigate('/login'); return }
+        if (!accessToken) { navigate('/landingpage'); return }
     }, [accessToken, authLoading]) // se relance quand les filtres changent
 
     if (authLoading) return <Loader />

@@ -13,7 +13,7 @@ const NotifsDisplay = ({users}) => {
 
     useEffect(() => {
         if (authLoading) return
-        if (!accessToken) { navigate('/login'); return }
+        if (!accessToken) { navigate('/landingpage'); return }
     }, [accessToken, authLoading])
 
     const [error, setError] = useState(null)
