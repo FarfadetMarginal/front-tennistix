@@ -15,7 +15,7 @@ const ProfileDisplay = () => {
     const handleLogout = async () => {
         await apiService.logout()
         logout()
-        navigate('/login')
+        navigate('/landingpage')
     }
 
     useEffect(() => {
