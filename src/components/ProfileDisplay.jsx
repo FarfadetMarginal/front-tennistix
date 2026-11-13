@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
@@ -31,7 +31,7 @@ const ProfileDisplay = () => {
                 <div className="d1profile">
                     <p>{user?.pseudo}</p>
                     <Link to="/notif">Notifications</Link>
-                    <Link to="/favlist">Favorite list</Link>
+                    {/* <Link to="/favlist">Favorite list</Link> */}
                     <Link to="/modify">Modify profile</Link>
                     <button onClick={handleLogout}>Logout</button>
                     <Link to="/settings">Settings</Link>

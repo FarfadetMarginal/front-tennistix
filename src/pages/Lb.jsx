@@ -19,7 +19,7 @@ const Leaderboard = () => {
 
     useEffect(() => {
         if (authLoading) return
-        if (!accessToken) { navigate('/login'); return }
+        if (!accessToken) { navigate('/landingpage'); return }
 
         const controller = new AbortController()
         async function load() {

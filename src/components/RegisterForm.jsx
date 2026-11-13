@@ -56,14 +56,13 @@ function RegisterForm() {
             navigate('/')
         } catch (err) {
             if(err.name !== 'AbortError') {
-            console.error('Loading error: ', err)
-            setError(err.message)
+                console.error('Loading error: ', err)
+                setError(err.message)
             }
         } finally {
             // Le finally s'exécute quoi qu'il arrive, après tout ce qui vient avant
             if(!controller.signal.aborted){
-            setLoading(false)
-            // Rediriger sur la page profile
+                setLoading(false)
             }
         }
     }

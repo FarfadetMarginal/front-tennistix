@@ -9,7 +9,7 @@ const Settings = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (!accessToken) navigate('/login')
+        if (!accessToken) navigate('/landingpage')
     }, [accessToken, navigate])
 
     const handleResetAnalytics = () => {

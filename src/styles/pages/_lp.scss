@@ -1,0 +1,137 @@
+@use '../abstracts/variables' as *;
+
+.lp{
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    min-height: max(100svh);
+    overflow: clip;
+    background-color: $bg;
+    color: black;
+    font-family: $textfont;
+
+    *{
+        box-sizing: border-box;
+    }
+
+    a{
+        color: black;
+        &:focus-visible{
+            outline: 3px solid $colord;
+            outline-offset: 5px;
+        }
+    }
+
+    .lpheader{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+
+        .lillogo{
+            display: block;
+            width: 60px;
+            height: 88px;
+            object-fit: contain;
+        }
+
+        nav{
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90px;
+            height: 30px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+            border-radius: 30px;
+            background-color: white;
+            font-size: 16px;
+            &:hover{
+                transform: scale(1.03)
+            }
+        }
+
+        .lplogin{
+            background-color: black;
+            color: white;
+        }
+    }
+
+    .lpjoin{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        width: 700px;
+        min-height: 90px;
+        margin: auto;
+        margin-top: 40px;
+        padding: 15px 30px;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.18);
+
+        h2{
+            margin: 0;
+            font-family: $titlefont;
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .lpcreate{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+            min-height: 50px;
+            padding: 5px 10px;
+            border-radius: 30px;
+            background-color: black;
+            color: white;
+            font-size: 24px;
+
+            &:hover{
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    @media (max-width: 1024px){
+        .lpjoin{
+            max-width: 85%;
+        }
+    }
+
+    @media (max-width: 767px){
+        min-height: 1229px;
+
+    
+
+        .lpjoin{
+            justify-content: center;
+            width: 100%;
+            max-width: none;
+            margin: 50px 0 0;
+            padding: 20px 10px;
+            border-radius: 0;
+
+            h2{
+                font-size: 34px;
+                text-align: center;
+            }
+
+            .lpcreate{
+                display: none;
+            }
+        }
+    }
+}

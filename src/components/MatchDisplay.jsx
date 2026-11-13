@@ -56,7 +56,7 @@ function MatchDisplay({ matches }) {
                     {match.type === 'incoming' && (
                         <div className="pronos">
                             {pronosDone[match.id] ? (
-                                // Prono déjà posé — affiche le choix
+                                // Prono déjà posé - affiche le choix
                                 <>                                
                                     <div className="match-details">
                                         <p>{match.player1}</p>

@@ -42,7 +42,6 @@ export function AuthProvider({ children }) {
           setAccessToken(data.token)
           setUser(data.user)
         } catch (err) {
-          console.log('refresh failed:', err.message)
           if (err.name !== 'AbortError') setAccessToken(null)
         } finally {
           if (!controller.signal.aborted) setLoading(false)

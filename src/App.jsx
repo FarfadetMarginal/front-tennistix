@@ -1,5 +1,5 @@
 import { Routes, Route, Outlet } from "react-router"
-import Home  from './pages/Home';
+import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import ForgotPass from './pages/ForgotPass';
@@ -13,6 +13,7 @@ import NotFound from './pages/NotFound';
 import NavBar from "./components/Navbar";
 import Legals from "./pages/Legals";
 import Settings from "./pages/Settings";
+import Lp from "./pages/Lp";
 
 // Layout avec la NavBar permanente
 function MainLayout() {
@@ -41,6 +42,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgotpass" element={<ForgotPass />} />
+      <Route path="/landingpage" element={<Lp />} />
       <Route path="/resetpass/:token" element={<ResetPass />} />
       <Route path="*" element={<NotFound />}/>
     </Routes>

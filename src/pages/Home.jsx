@@ -7,8 +7,6 @@ import { useAuth } from "../contexts/AuthContext";
 import { useNavigate, Link } from "react-router-dom"
 import Loader from "../components/Loader";
 
-
-
 const Home = () => {
 
     const [loading, setLoading] = useState(false)
@@ -24,7 +22,7 @@ const Home = () => {
         if (authLoading) return 
         if (!accessToken) {
                 // rediriger vers login ou afficher message
-                navigate('/login')
+                navigate('/landingpage')
                 return 
             }
         const controller = new AbortController();

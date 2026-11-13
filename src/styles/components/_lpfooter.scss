@@ -1,0 +1,76 @@
+@use '../abstracts/variables' as *;
+
+.lpfooter{
+    flex: 1;
+    min-height: 315px;
+
+    .lplandscape{
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        mask-image: linear-gradient(to bottom, transparent, black 12%);
+
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .lplegals{
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 20px;
+        line-height: 24px;
+
+        a{
+            width: fit-content;
+            color: white;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+
+            &:hover{
+                transform: scale(1.03)
+            }
+        }
+    }
+
+    .lpcopyright{
+        position: absolute;
+        right: 10px;
+        bottom: 7px;
+        left: 10px;
+        margin: 0;
+        color: white;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+    }
+
+    @media (max-width: 767px){
+        min-height: 267px;
+
+        .lplegals{
+            bottom: 100px;
+            left: 10px;
+            gap: 10px;
+            font-size: 16px;
+
+            a{
+                color: black;
+                text-shadow: 0 0 4px $bg, 0 0 8px $bg;
+            }
+        }
+
+        .lpcopyright{
+            bottom: 5px;
+        }
+    }
+}
